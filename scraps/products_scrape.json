@@ -1,0 +1,651 @@
+[
+ {
+  "name": "Citronnade",
+  "sub": "Citron frais",
+  "sizedBtn": {
+   "id": "jc-citronnade",
+   "cat": "Jus",
+   "img": "assets/jus-citronnade.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-citronnade",
+  "badge": null
+ },
+ {
+  "name": "Citronnade Menthe",
+  "sub": "Citron · menthe",
+  "sizedBtn": {
+   "id": "jc-citronnade-menthe",
+   "cat": "Jus",
+   "img": "assets/jus-citronnade-menthe.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-citronnade-menthe",
+  "badge": null
+ },
+ {
+  "name": "Citronnade Lim",
+  "sub": "Citron vert",
+  "sizedBtn": {
+   "id": "jc-citronnade-lim",
+   "cat": "Jus",
+   "img": "assets/jus-citronnade-lim.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-citronnade-lim",
+  "badge": null
+ },
+ {
+  "name": "Citronnade Ananas",
+  "sub": "Citron · ananas",
+  "sizedBtn": {
+   "id": "jc-citronnade-ananas",
+   "cat": "Jus",
+   "img": "assets/jus-citronnade-ananas.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-citronnade-ananas",
+  "badge": null
+ },
+ {
+  "name": "Fraise",
+  "sub": "Fraise",
+  "sizedBtn": {
+   "id": "jc-fraise",
+   "cat": "Jus",
+   "img": "assets/jus-fraise.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-fraise",
+  "badge": null
+ },
+ {
+  "name": "Fraise Framboise",
+  "sub": "Fraise · framboise",
+  "sizedBtn": {
+   "id": "jc-fraise-framboise",
+   "cat": "Jus",
+   "img": "assets/jus-fraise-framboise.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-fraise-framboise",
+  "badge": null
+ },
+ {
+  "name": "Fraise Banane",
+  "sub": "Fraise · banane",
+  "sizedBtn": {
+   "id": "jc-fraise-banane",
+   "cat": "Jus",
+   "img": "assets/jus-fraise-banane.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-fraise-banane",
+  "badge": null
+ },
+ {
+  "name": "Pêche",
+  "sub": "Pêche",
+  "sizedBtn": {
+   "id": "jc-peche",
+   "cat": "Jus",
+   "img": "assets/jus-peche.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-peche",
+  "badge": null
+ },
+ {
+  "name": "Pêche Banane",
+  "sub": "Pêche · banane",
+  "sizedBtn": {
+   "id": "jc-peche-banane",
+   "cat": "Jus",
+   "img": "assets/jus-peche-banane.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-peche-banane",
+  "badge": null
+ },
+ {
+  "name": "Pêche Amandes",
+  "sub": "Pêche · amandes",
+  "sizedBtn": {
+   "id": "jc-peche-amandes",
+   "cat": "Jus",
+   "img": "assets/jus-peche-amandes.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-peche-amandes",
+  "badge": null
+ },
+ {
+  "name": "Abricots",
+  "sub": "Abricot",
+  "sizedBtn": {
+   "id": "jc-abricots",
+   "cat": "Jus",
+   "img": "assets/jus-abricots.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-abricots",
+  "badge": null
+ },
+ {
+  "name": "Pomme",
+  "sub": "Pomme",
+  "sizedBtn": {
+   "id": "jc-pomme",
+   "cat": "Jus",
+   "img": "assets/jus-pomme.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-pomme",
+  "badge": null
+ },
+ {
+  "name": "Pomme Banane",
+  "sub": "Pomme · banane",
+  "sizedBtn": {
+   "id": "jc-pomme-banane",
+   "cat": "Jus",
+   "img": "assets/jus-pomme-banane.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-pomme-banane",
+  "badge": null
+ },
+ {
+  "name": "Pomme Banane Fruits Secs",
+  "sub": "Pomme · banane · fruits secs",
+  "sizedBtn": {
+   "id": "jc-pomme-banane-fs",
+   "cat": "Jus",
+   "img": "assets/jus-pomme-banane-fruits-secs.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-pomme-banane-fs",
+  "badge": null
+ },
+ {
+  "name": "Orange",
+  "sub": "Orange",
+  "sizedBtn": {
+   "id": "jc-orange",
+   "cat": "Jus",
+   "img": "assets/jus-orange.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-orange",
+  "badge": null
+ },
+ {
+  "name": "Orange Banane",
+  "sub": "Orange · banane",
+  "sizedBtn": {
+   "id": "jc-orange-banane",
+   "cat": "Jus",
+   "img": "assets/jus-orange-banane.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-orange-banane",
+  "badge": null
+ },
+ {
+  "name": "Figue",
+  "sub": "Figue",
+  "sizedBtn": {
+   "id": "jc-figue",
+   "cat": "Jus",
+   "img": "assets/jus-figue.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-figue",
+  "badge": null
+ },
+ {
+  "name": "Kiwi",
+  "sub": "Kiwi",
+  "sizedBtn": {
+   "id": "jc-kiwi",
+   "cat": "Jus",
+   "img": "assets/jus-kiwi.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-kiwi",
+  "badge": null
+ },
+ {
+  "name": "Kiwi Banane",
+  "sub": "Kiwi · banane",
+  "sizedBtn": {
+   "id": "jc-kiwi-banane",
+   "cat": "Jus",
+   "img": "assets/jus-kiwi-banane.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-kiwi-banane",
+  "badge": null
+ },
+ {
+  "name": "Ananas",
+  "sub": "Ananas",
+  "sizedBtn": {
+   "id": "jc-ananas",
+   "cat": "Jus",
+   "img": "assets/jus-ananas.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-ananas",
+  "badge": null
+ },
+ {
+  "name": "Ananas Banane",
+  "sub": "Ananas · banane",
+  "sizedBtn": {
+   "id": "jc-ananas-banane",
+   "cat": "Jus",
+   "img": "assets/jus-ananas-banane.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-ananas-banane",
+  "badge": null
+ },
+ {
+  "name": "Mangue",
+  "sub": "Mangue",
+  "sizedBtn": {
+   "id": "jc-mangue",
+   "cat": "Jus",
+   "img": "assets/jus-mangue.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-mangue",
+  "badge": null
+ },
+ {
+  "name": "Mangue Banane",
+  "sub": "Mangue · banane",
+  "sizedBtn": {
+   "id": "jc-mangue-banane",
+   "cat": "Jus",
+   "img": "assets/jus-mangue-banane.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-mangue-banane",
+  "badge": null
+ },
+ {
+  "name": "Framboise",
+  "sub": "Framboise",
+  "sizedBtn": {
+   "id": "jc-framboise",
+   "cat": "Jus",
+   "img": "assets/jus-framboise.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "jc-framboise",
+  "badge": null
+ },
+ {
+  "name": "Cerise Saveurs Gourmandes",
+  "sub": "Cerise",
+  "sizedBtn": {
+   "id": "gm-cerise",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-cerise.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-cerise",
+  "badge": null
+ },
+ {
+  "name": "Chewing Gum Chocolat Blanc",
+  "sub": "Chocolat blanc",
+  "sizedBtn": {
+   "id": "gm-chewinggum",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-chewing-gum-choco-blanc.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-chewinggum",
+  "badge": null
+ },
+ {
+  "name": "Zgougou",
+  "sub": "Zgougou",
+  "sizedBtn": {
+   "id": "gm-zgougou",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-zgougou.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-zgougou",
+  "badge": null
+ },
+ {
+  "name": "Cappuccino",
+  "sub": "Café · lait",
+  "sizedBtn": {
+   "id": "gm-cappuccino",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-cappuccino.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-cappuccino",
+  "badge": null
+ },
+ {
+  "name": "Noisette",
+  "sub": "Noisette",
+  "sizedBtn": {
+   "id": "gm-noisette",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-noisette.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-noisette",
+  "badge": null
+ },
+ {
+  "name": "Noisette Biscuits",
+  "sub": "Noisette · biscuits",
+  "sizedBtn": {
+   "id": "gm-noisette-biscuits",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-noisette-biscuits.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-noisette-biscuits",
+  "badge": null
+ },
+ {
+  "name": "Chocolat Nutella",
+  "sub": "Chocolat · noisette",
+  "sizedBtn": {
+   "id": "gm-chocolat-nutella",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-chocolat-nutella.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-chocolat-nutella",
+  "badge": null
+ },
+ {
+  "name": "Chocolat Ferrero",
+  "sub": "Chocolat · noisette",
+  "sizedBtn": {
+   "id": "gm-chocolat-ferrero",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-chocolat-ferrero.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-chocolat-ferrero",
+  "badge": null
+ },
+ {
+  "name": "Pistache",
+  "sub": "Pistache",
+  "sizedBtn": {
+   "id": "gm-pistache",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-pistache.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-pistache",
+  "badge": null
+ },
+ {
+  "name": "Banane Fruits Secs",
+  "sub": "Banane · fruits secs",
+  "sizedBtn": {
+   "id": "gm-banane-fs",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-banane-fruits-secs.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-banane-fs",
+  "badge": null
+ },
+ {
+  "name": "Rozata Pistaches",
+  "sub": "Rozata · pistache",
+  "sizedBtn": {
+   "id": "gm-rozata-pistaches",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-rozata-pistaches.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-rozata-pistaches",
+  "badge": null
+ },
+ {
+  "name": "Rozata Amandes",
+  "sub": "Rozata · amande",
+  "sizedBtn": {
+   "id": "gm-rozata-amandes",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-rozata-amandes.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-rozata-amandes",
+  "badge": null
+ },
+ {
+  "name": "Rozata Noisettes",
+  "sub": "Rozata · noisette",
+  "sizedBtn": {
+   "id": "gm-rozata-noisettes",
+   "cat": "Gourmandes",
+   "img": "assets/gourmandes-rozata-noisettes.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "gm-rozata-noisettes",
+  "badge": null
+ },
+ {
+  "name": "Tous les Fruits",
+  "sub": "Cocktail multifruits",
+  "sizedBtn": {
+   "id": "ck-tous-les-fruits",
+   "cat": "Cocktail",
+   "img": "assets/cocktail-tous-les-fruits.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "ck-tous-les-fruits",
+  "badge": null
+ },
+ {
+  "name": "Myrtille",
+  "sub": "Myrtille",
+  "sizedBtn": {
+   "id": "ck-myrtille",
+   "cat": "Cocktail",
+   "img": "assets/cocktail-myrtille.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "ck-myrtille",
+  "badge": null
+ },
+ {
+  "name": "Framboise",
+  "sub": "Framboise",
+  "sizedBtn": {
+   "id": "ck-framboise",
+   "cat": "Cocktail",
+   "img": "assets/cocktail-framboise.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "ck-framboise",
+  "badge": null
+ },
+ {
+  "name": "Dattes Pomme Noisette Amandes",
+  "sub": "Dattes · pomme · noisette · amandes",
+  "sizedBtn": {
+   "id": "ck-dattes-pomme-noisette-amandes",
+   "cat": "Cocktail",
+   "img": "assets/cocktail-dattes-pomme-noisette-amandes.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "ck-dattes-pomme-noisette-amandes",
+  "badge": null
+ },
+ {
+  "name": "Fraise Banane Orange",
+  "sub": "Fraise · banane · orange",
+  "sizedBtn": {
+   "id": "ck-fraise-banane-orange",
+   "cat": "Cocktail",
+   "img": "assets/cocktail-fraise-banane-orange.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "ck-fraise-banane-orange",
+  "badge": null
+ },
+ {
+  "name": "Framboise Fraise Banane",
+  "sub": "Framboise · fraise · banane",
+  "sizedBtn": {
+   "id": "ck-framboise-fraise-banane",
+   "cat": "Cocktail",
+   "img": "assets/cocktail-framboise-fraise-banane.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "ck-framboise-fraise-banane",
+  "badge": null
+ },
+ {
+  "name": "Dattes Banane Pomme",
+  "sub": "Dattes · banane · pomme",
+  "sizedBtn": {
+   "id": "ck-dattes-banane-pomme",
+   "cat": "Cocktail",
+   "img": "assets/cocktail-dattes-banane-pomme.jpg"
+  },
+  "singleBtn": null,
+  "slotId": "ck-dattes-banane-pomme",
+  "badge": null
+ },
+ {
+  "name": "Bsissa Shake",
+  "sub": "Bsissa · lait · dattes",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "10",
+   "cat": "Signature"
+  },
+  "slotId": "sg-bsissa",
+  "badge": "TERROIR"
+ },
+ {
+  "name": "Zrir Smoothie",
+  "sub": "Zrir · lait · miel",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "10.5",
+   "cat": "Signature"
+  },
+  "slotId": "sg-zrir",
+  "badge": "TERROIR"
+ },
+ {
+  "name": "Shake Dattes &amp; Amandes",
+  "sub": "Dattes · amandes · lait",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "11",
+   "cat": "Signature"
+  },
+  "slotId": "sg-dattes",
+  "badge": null
+ },
+ {
+  "name": "Énergie du Sahel",
+  "sub": "Amande · datte · miel",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "11",
+   "cat": "Signature"
+  },
+  "slotId": "sg-sahel",
+  "badge": null
+ },
+ {
+  "name": "Cocktail Tunisien",
+  "sub": "Orange · dattes · miel",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "10",
+   "cat": "Signature"
+  },
+  "slotId": "sg-tunisien",
+  "badge": null
+ },
+ {
+  "name": "Caroube Naturelle",
+  "sub": "Caroube · lait",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "9.5",
+   "cat": "Signature"
+  },
+  "slotId": "sg-caroube",
+  "badge": null
+ },
+ {
+  "name": "Grenade Premium",
+  "sub": "Jus de grenade frais",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "12",
+   "cat": "VIP"
+  },
+  "slotId": "vp-grenade",
+  "badge": "VIP"
+ },
+ {
+  "name": "Figue de Barbarie",
+  "sub": "Jus de figue de barbarie",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "12",
+   "cat": "VIP"
+  },
+  "slotId": "vp-figue",
+  "badge": "VIP"
+ },
+ {
+  "name": "Avocat Fruits Secs Deluxe",
+  "sub": "Avocat · amandes · noisettes · pistaches",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "13",
+   "cat": "VIP"
+  },
+  "slotId": "vp-avocat",
+  "badge": "VIP"
+ },
+ {
+  "name": "Cocktail Moringa Signature",
+  "sub": "Moringa · pomme · kiwi · citron",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "13",
+   "cat": "VIP"
+  },
+  "slotId": "vp-signature",
+  "badge": "VIP"
+ },
+ {
+  "name": "Cocktail Tropical",
+  "sub": "Mangue · ananas · orange",
+  "sizedBtn": null,
+  "singleBtn": {
+   "price": "12",
+   "cat": "VIP"
+  },
+  "slotId": "vp-tropical",
+  "badge": null
+ }
+]

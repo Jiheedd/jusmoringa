@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;family=Tajawal:wght@400;500;700&amp;family=Cormorant+Garamond:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green-900:#1F4D2B; --green-700:#356B3A; --green-500:#6BA368;
+    --honey:#C9962E; --honey-200:#E8CE8E; --honey-50:#F3E7C6;
+    --cream:#F7F1E3; --cream-2:#FBF7EC; --paper:#FFFFFF;
+    --ink:#22271E; --muted:#6E7263; --pink:#E7B7BB;
+    --type-display:104px; --type-title:64px; --type-subtitle:40px;
+    --type-body:30px; --type-small:24px; --type-tiny:24px;
+    --pad-x:120px; --pad-y:96px;
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:"Archivo","Manrope",system-ui,sans-serif;
+    --body:"Manrope",system-ui,sans-serif;
+    --ar:"Tajawal",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  section{font-family:var(--body); color:var(--ink); -webkit-font-smoothing:antialiased; overflow:hidden;}
+  h1,h2,h3,h4{margin:0; font-family:var(--sans); font-weight:800; letter-spacing:-0.02em; line-height:1.04;}
+  p{margin:0;}
+</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%" data-uneditable="">
+
+<section data-label="Cover" data-screen-label="Cover" data-speaker-notes="MORINGA brand book. Tunisian healthy food &amp; beverage brand. Natural, healthy, delicious — طبيعي، صحي، وبنين." style="height:100%; display:flex; background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); position:relative;">
+    <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.42em; color:var(--honey-200); text-transform:uppercase;">Charte de marque · Brand Book</div>
+    <h1 style="font-size:var(--type-display); color:var(--cream); margin-top:30px; letter-spacing:-0.01em;">L'identité<br>MORINGA</h1>
+    <div style="font-family:var(--ar); direction:rtl; font-size:46px; color:var(--honey-200); margin-top:30px; font-weight:500;">طبيعي، صحي، وبنين</div>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:18px; max-width:620px; line-height:1.5;">Alimentation &amp; boissons saines · Authenticité tunisienne · Édition 2026</p>
+    <div style="height:2px; width:160px; background:var(--honey); margin-top:46px;"></div>
+  </div>
+  <div style="width:760px; display:flex; align-items:center; justify-content:center; position:relative;">
+    <div style="width:480px; height:480px; border-radius:50%; background:radial-gradient(circle at 40% 35%, rgba(231,183,187,.22), transparent 62%); position:absolute;"></div>
+    <div style="width:430px; height:430px; background:var(--cream); border-radius:32px; box-shadow:0 40px 90px rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;">
+      <img src="assets/moringa-logo.jpg" alt="Logo Moringa" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+  </div>
+</section>
+
+<section data-label="Sommaire" data-screen-label="Sommaire" data-speaker-notes="The brand book covers eight parts: strategy, graphic charter, packaging, retail, social, e-commerce, mobile app, marketing." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--cream-2);">
+  <div style="display:flex; align-items:baseline; gap:24px; margin-bottom:56px;">
+    <h2 style="font-size:var(--type-title); color:var(--green-900);">Sommaire</h2>
+    <span style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase;">Table des matières</span>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:30px 90px;">
+    <div style="display:flex; gap:26px; align-items:flex-start; border-top:2px solid rgba(31,77,43,.14); padding-top:22px;"><span style="font-family:var(--sans); font-weight:800; font-size:34px; color:var(--honey);">01</span><div><div style="font-family:var(--sans); font-weight:700; font-size:32px; color:var(--green-900);">Stratégie de marque</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Vision, valeurs, histoire, ton</div></div></div>
+    <div style="display:flex; gap:26px; align-items:flex-start; border-top:2px solid rgba(31,77,43,.14); padding-top:22px;"><span style="font-family:var(--sans); font-weight:800; font-size:34px; color:var(--honey);">02</span><div><div style="font-family:var(--sans); font-weight:700; font-size:32px; color:var(--green-900);">Charte graphique</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Logo, couleurs, typographie, motifs</div></div></div>
+    <div style="display:flex; gap:26px; align-items:flex-start; border-top:2px solid rgba(31,77,43,.14); padding-top:22px;"><span style="font-family:var(--sans); font-weight:800; font-size:34px; color:var(--honey);">03</span><div><div style="font-family:var(--sans); font-weight:700; font-size:32px; color:var(--green-900);">Packaging produits</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Jus, détox, miel, bsissa, zrir, coffrets</div></div></div>
+    <div style="display:flex; gap:26px; align-items:flex-start; border-top:2px solid rgba(31,77,43,.14); padding-top:22px;"><span style="font-family:var(--sans); font-weight:800; font-size:34px; color:var(--honey);">04</span><div><div style="font-family:var(--sans); font-weight:700; font-size:32px; color:var(--green-900);">Expérience retail</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Boutique &amp; merchandising</div></div></div>
+    <div style="display:flex; gap:26px; align-items:flex-start; border-top:2px solid rgba(31,77,43,.14); padding-top:22px;"><span style="font-family:var(--sans); font-weight:800; font-size:34px; color:var(--honey);">05</span><div><div style="font-family:var(--sans); font-weight:700; font-size:32px; color:var(--green-900);">Réseaux sociaux</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Templates posts, stories, promos</div></div></div>
+    <div style="display:flex; gap:26px; align-items:flex-start; border-top:2px solid rgba(31,77,43,.14); padding-top:22px;"><span style="font-family:var(--sans); font-weight:800; font-size:34px; color:var(--honey);">06</span><div><div style="font-family:var(--sans); font-weight:700; font-size:32px; color:var(--green-900);">E-commerce &amp; App</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Site web, page produit, mobile</div></div></div>
+    <div style="display:flex; gap:26px; align-items:flex-start; border-top:2px solid rgba(31,77,43,.14); padding-top:22px;"><span style="font-family:var(--sans); font-weight:800; font-size:34px; color:var(--honey);">07</span><div><div style="font-family:var(--sans); font-weight:700; font-size:32px; color:var(--green-900);">Stratégie marketing</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Campagnes, fidélité, VIP</div></div></div>
+    <div style="display:flex; gap:26px; align-items:flex-start; border-top:2px solid rgba(31,77,43,.14); padding-top:22px;"><span style="font-family:var(--sans); font-weight:800; font-size:34px; color:var(--honey);">08</span><div><div style="font-family:var(--sans); font-weight:700; font-size:32px; color:var(--green-900);">Roadmap de croissance</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Plan de déploiement</div></div></div>
+  </div>
+</section>
+
+<section data-label="01 Stratégie" data-screen-label="Divider 01" data-speaker-notes="Part one: brand strategy — the foundation everything else is built on." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative;">
+    <div style="font-family:var(--sans); font-weight:800; font-size:180px; color:var(--honey); line-height:1;">01</div>
+    <h2 style="font-size:88px; color:var(--cream); margin-top:8px;">Stratégie de marque</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:24px; max-width:760px; line-height:1.5;">Qui nous sommes, ce en quoi nous croyons, et la promesse que nous tenons à chaque client.</p>
+  </div>
+</section>
+
+<section data-label="Vision &amp; Mission" data-screen-label="Vision Mission" data-speaker-notes="Vision is the destination; mission is how we get there every day." style="height:100%; display:flex; flex-direction:column; padding:var(--pad-y) var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">01 · Stratégie</div>
+  <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:56px;">Vision &amp; Mission</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; flex:1;">
+    <div style="background:var(--paper); border-radius:24px; padding:54px; box-shadow:0 18px 50px rgba(31,77,43,.08); display:flex; flex-direction:column;">
+      <div style="font-family:var(--serif); font-style:italic; font-size:32px; color:var(--honey);">Vision</div>
+      <p style="font-size:38px; line-height:1.32; color:var(--green-900); margin-top:24px; font-family:var(--sans); font-weight:600;">Faire de Moringa la marque tunisienne de référence du bien-être naturel — celle que chaque famille choisit pour vivre sainement, sans renoncer au goût.</p>
+    </div>
+    <div style="background:var(--green-900); border-radius:24px; padding:54px; display:flex; flex-direction:column;">
+      <div style="font-family:var(--serif); font-style:italic; font-size:32px; color:var(--honey-200);">Mission</div>
+      <p style="font-size:34px; line-height:1.4; color:var(--cream); margin-top:24px;">Transformer des ingrédients locaux, frais et de saison en produits sains et délicieux — jus, détox, miel, bsissa, zrir — accessibles au quotidien et dignes des plus belles occasions.</p>
+    </div>
+  </div>
+</section>
+
+<section data-label="Valeurs" data-screen-label="Valeurs" data-speaker-notes="Six values: natural, authentic, healthy, premium, trustworthy, fresh." style="height:100%; display:flex; flex-direction:column; padding:var(--pad-y) var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">01 · Stratégie</div>
+  <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:50px;">Nos valeurs</h2>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:1fr 1fr; gap:28px; flex:1;">
+    <div style="background:var(--paper); border-radius:20px; padding:38px; display:flex; flex-direction:column; justify-content:flex-end; box-shadow:0 14px 36px rgba(31,77,43,.06);"><div style="width:52px; height:52px; border-radius:50%; background:var(--green-500); margin-bottom:auto;"></div><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--green-900); margin-top:20px;">Naturel</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:8px; line-height:1.45;">Sans additifs, sans artifices. La nature comme seule recette.</p></div>
+    <div style="background:var(--paper); border-radius:20px; padding:38px; display:flex; flex-direction:column; justify-content:flex-end; box-shadow:0 14px 36px rgba(31,77,43,.06);"><div style="width:52px; height:52px; border-radius:50%; background:var(--honey); margin-bottom:auto;"></div><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--green-900); margin-top:20px;">Authentique</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:8px; line-height:1.45;">Recettes et savoir-faire tunisiens transmis de génération en génération.</p></div>
+    <div style="background:var(--paper); border-radius:20px; padding:38px; display:flex; flex-direction:column; justify-content:flex-end; box-shadow:0 14px 36px rgba(31,77,43,.06);"><div style="width:52px; height:52px; border-radius:50%; background:var(--green-700); margin-bottom:auto;"></div><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--green-900); margin-top:20px;">Sain</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:8px; line-height:1.45;">Une nutrition qui fait du bien au corps comme à l'esprit.</p></div>
+    <div style="background:var(--paper); border-radius:20px; padding:38px; display:flex; flex-direction:column; justify-content:flex-end; box-shadow:0 14px 36px rgba(31,77,43,.06);"><div style="width:52px; height:52px; border-radius:50%; background:var(--honey-200);"></div><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--green-900); margin-top:20px;">Premium</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:8px; line-height:1.45;">Une qualité et une présentation soignées dans le moindre détail.</p></div>
+    <div style="background:var(--paper); border-radius:20px; padding:38px; display:flex; flex-direction:column; justify-content:flex-end; box-shadow:0 14px 36px rgba(31,77,43,.06);"><div style="width:52px; height:52px; border-radius:50%; background:var(--pink);"></div><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--green-900); margin-top:20px;">Confiance</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:8px; line-height:1.45;">Transparence sur les ingrédients, l'origine et les bienfaits.</p></div>
+    <div style="background:var(--paper); border-radius:20px; padding:38px; display:flex; flex-direction:column; justify-content:flex-end; box-shadow:0 14px 36px rgba(31,77,43,.06);"><div style="width:52px; height:52px; border-radius:50%; background:var(--green-500);"></div><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--green-900); margin-top:20px;">Fraîcheur</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:8px; line-height:1.45;">Pressé du jour, préparé avec des produits de saison.</p></div>
+  </div>
+</section>
+
+<section data-label="Histoire" data-screen-label="Histoire" data-speaker-notes="Brand story — rooted in a Tunisian kitchen, scaled to a modern wellness brand." style="height:100%; display:flex; background:var(--green-900);">
+  <div style="flex:1.05; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x);">
+    <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey-200); text-transform:uppercase; margin-bottom:14px;">01 · Stratégie</div>
+    <h2 style="font-size:var(--type-title); color:var(--cream); margin-bottom:34px;">L'histoire de la marque</h2>
+    <p style="font-size:30px; line-height:1.55; color:rgba(247,241,227,.85); max-width:740px;">Moringa est née d'un geste simple et tunisien : presser le meilleur de la nature pour ceux qu'on aime. D'une cuisine familiale où l'on préparait bsissa, zrir et jus de saison, est née l'envie de partager cette générosité avec tout un pays.</p>
+    <p style="font-size:30px; line-height:1.55; color:rgba(247,241,227,.85); max-width:740px; margin-top:26px;">Aujourd'hui, Moringa réunit l'âme de la tradition tunisienne et les codes du bien-être moderne — pour faire du naturel un plaisir quotidien, et de chaque coffret un moment d'exception.</p>
+  </div>
+  <div style="width:640px; position:relative; background:repeating-linear-gradient(135deg,#2a5a36 0 18px,#27522f 18px 36px); display:flex; align-items:center; justify-content:center;">
+    <div style="text-align:center; color:rgba(247,241,227,.65); font-family:'IBM Plex Mono',monospace; font-size:24px;">
+      <div style="width:120px; height:120px; border:2px dashed rgba(247,241,227,.4); border-radius:16px; margin:0 auto 18px;"></div>
+      [ PHOTO — atelier / mains qui pressent les fruits ]
+    </div>
+  </div>
+</section>
+
+<section data-label="Personnalité" data-screen-label="Personnalité" data-speaker-notes="Personality spectrum — warm but premium, rooted but modern." style="height:100%; display:flex; flex-direction:column; padding:var(--pad-y) var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">01 · Stratégie</div>
+  <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:18px;">Personnalité de marque</h2>
+  <p style="font-size:var(--type-body); color:var(--muted); max-width:900px; margin-bottom:48px;">Si Moringa était une personne : chaleureuse et accueillante, fière de ses racines, mais élégante et tournée vers demain.</p>
+  <div style="display:flex; flex-direction:column; gap:34px; max-width:1180px;">
+    <div style="display:grid; grid-template-columns:240px 1fr 240px; align-items:center; gap:30px;"><span style="font-size:26px; color:var(--muted); text-align:right;">Traditionnel</span><div style="height:8px; border-radius:4px; background:linear-gradient(90deg,var(--honey),var(--green-500)); position:relative;"><div style="position:absolute; left:62%; top:50%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:var(--green-900); border:4px solid var(--cream-2);"></div></div><span style="font-size:26px; color:var(--green-900); font-weight:600;">Moderne</span></div>
+    <div style="display:grid; grid-template-columns:240px 1fr 240px; align-items:center; gap:30px;"><span style="font-size:26px; color:var(--muted); text-align:right;">Accessible</span><div style="height:8px; border-radius:4px; background:linear-gradient(90deg,var(--green-500),var(--honey)); position:relative;"><div style="position:absolute; left:58%; top:50%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:var(--green-900); border:4px solid var(--cream-2);"></div></div><span style="font-size:26px; color:var(--green-900); font-weight:600;">Premium</span></div>
+    <div style="display:grid; grid-template-columns:240px 1fr 240px; align-items:center; gap:30px;"><span style="font-size:26px; color:var(--muted); text-align:right;">Sérieux</span><div style="height:8px; border-radius:4px; background:linear-gradient(90deg,var(--honey),var(--green-500)); position:relative;"><div style="position:absolute; left:40%; top:50%; transform:translate(-50%,-50%); width:26px; height:26px; border-radius:50%; background:var(--green-900); border:4px solid var(--cream-2);"></div></div><span style="font-size:26px; color:var(--green-900); font-weight:600;">Chaleureux</span></div>
+  </div>
+  <div style="display:flex; gap:16px; margin-top:54px; flex-wrap:wrap;">
+    <span style="background:var(--green-900); color:var(--cream); padding:14px 28px; border-radius:100px; font-size:24px; font-weight:600;">Bienveillant</span>
+    <span style="background:var(--honey); color:#3a2c08; padding:14px 28px; border-radius:100px; font-size:24px; font-weight:600;">Généreux</span>
+    <span style="background:var(--paper); color:var(--green-900); padding:14px 28px; border-radius:100px; font-size:24px; font-weight:600; box-shadow:0 8px 20px rgba(31,77,43,.08);">Élégant</span>
+    <span style="background:var(--green-500); color:#fff; padding:14px 28px; border-radius:100px; font-size:24px; font-weight:600;">Vivant</span>
+    <span style="background:var(--pink); color:#5a2f33; padding:14px 28px; border-radius:100px; font-size:24px; font-weight:600;">Raffiné</span>
+  </div>
+</section>
+
+<section data-label="Promesse &amp; USP" data-screen-label="Promesse USP" data-speaker-notes="The promise is the slogan; the USP is what only Moringa offers." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--cream-2); position:relative;">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:24px;">01 · Stratégie · Promesse de marque</div>
+  <div style="font-family:var(--ar); direction:rtl; font-size:96px; color:var(--green-900); font-weight:700; line-height:1.2;">طبيعي، صحي، وبنين</div>
+  <p style="font-family:var(--serif); font-style:italic; font-size:44px; color:var(--honey); margin-top:10px;">Naturel, sain et délicieux.</p>
+  <div style="display:flex; gap:60px; margin-top:64px; max-width:1300px;">
+    <div style="flex:1; border-top:3px solid var(--green-900); padding-top:24px;">
+      <div style="font-family:var(--sans); font-weight:700; font-size:26px; color:var(--green-900); text-transform:uppercase; letter-spacing:0.08em;">Proposition unique</div>
+      <p style="font-size:28px; color:var(--ink); margin-top:14px; line-height:1.5;">La seule marque tunisienne qui réunit jus pressés du jour, trésors du terroir (miel, bsissa, zrir) et coffrets d'exception — sous une même signature de fraîcheur et de qualité.</p>
+    </div>
+    <div style="flex:1; border-top:3px solid var(--honey); padding-top:24px;">
+      <div style="font-family:var(--sans); font-weight:700; font-size:26px; color:var(--green-900); text-transform:uppercase; letter-spacing:0.08em;">Ce que nous promettons</div>
+      <p style="font-size:28px; color:var(--ink); margin-top:14px; line-height:1.5;">Des produits 100% naturels, une fraîcheur garantie, une expérience premium — du quotidien aux grandes occasions de la vie.</p>
+    </div>
+  </div>
+</section>
+
+<section data-label="Tone of voice" data-screen-label="Tone of voice" data-speaker-notes="Trilingual voice: Arabic warm and proverbial, French elegant, English clean and modern." style="height:100%; display:flex; flex-direction:column; padding:var(--pad-y) var(--pad-x); background:var(--green-900);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey-200); text-transform:uppercase; margin-bottom:14px;">01 · Stratégie</div>
+  <h2 style="font-size:var(--type-title); color:var(--cream); margin-bottom:14px;">Ton de voix</h2>
+  <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-bottom:50px; max-width:1000px;">Une seule personnalité, trois langues. Chaleureux et fier en arabe, élégant en français, clair et moderne en anglais.</p>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px; flex:1;">
+    <div style="background:rgba(255,255,255,.06); border-radius:22px; padding:44px; display:flex; flex-direction:column;"><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--honey-200);">العربية</div><div style="font-size:var(--type-tiny); color:rgba(247,241,227,.6); margin-top:6px;">Chaleureux · proverbial</div><div style="font-family:var(--ar); direction:rtl; font-size:30px; color:var(--cream); margin-top:30px; line-height:1.6;">من قلب الطبيعة التونسية، نقدّملك الأحسن. صحّة، طعم، وبركة في كل قطرة.</div></div>
+    <div style="background:rgba(255,255,255,.06); border-radius:22px; padding:44px; display:flex; flex-direction:column;"><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--honey-200);">Français</div><div style="font-size:var(--type-tiny); color:rgba(247,241,227,.6); margin-top:6px;">Élégant · généreux</div><div style="font-size:28px; color:var(--cream); margin-top:30px; line-height:1.55;">« Le meilleur de la nature tunisienne, pressé pour vous. Du goût, de la fraîcheur, et tout le bien que ça fait. »</div></div>
+    <div style="background:rgba(255,255,255,.06); border-radius:22px; padding:44px; display:flex; flex-direction:column;"><div style="font-family:var(--sans); font-weight:700; font-size:30px; color:var(--honey-200);">English</div><div style="font-size:var(--type-tiny); color:rgba(247,241,227,.6); margin-top:6px;">Clean · modern</div><div style="font-size:28px; color:var(--cream); margin-top:30px; line-height:1.55;">"Nature's best from Tunisia, freshly pressed for you. Real taste, real goodness — every single day."</div></div>
+  </div>
+</section>
+
+<section data-label="02 Charte" data-screen-label="Divider 02" data-speaker-notes="" style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative;">
+    <div style="font-family:var(--sans); font-weight:800; font-size:180px; color:var(--honey); line-height:1;">02</div>
+    <h2 style="font-size:88px; color:var(--cream); margin-top:8px;">Charte graphique</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:24px; max-width:760px; line-height:1.5;">Le logo, la palette, la typographie et les motifs qui rendent Moringa immédiatement reconnaissable.</p>
+  </div>
+</section>
+
+<section data-label="Logo &amp; déclinaisons" data-screen-label="Logo variations" data-speaker-notes="" style="height:100%; display:flex; flex-direction:column; padding:var(--pad-y) var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">02 · Charte graphique</div>
+  <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:46px;">Le logo &amp; ses déclinaisons</h2>
+  <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:30px; flex:1;">
+    <div style="background:var(--paper); border-radius:22px; padding:34px; display:flex; flex-direction:column; box-shadow:0 14px 36px rgba(31,77,43,.06);">
+      <div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Logo principal</div>
+      <div style="flex:1; display:flex; align-items:center; justify-content:center; margin-top:20px;"><img src="assets/moringa-logo.jpg" alt="Logo principal" style="width:78%; border-radius:16px;"></div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:30px;">
+      <div style="flex:1; background:var(--paper); border-radius:22px; padding:26px; display:flex; flex-direction:column; box-shadow:0 14px 36px rgba(31,77,43,.06);">
+        <div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Horizontal</div>
+        <div style="flex:1; display:flex; align-items:center; gap:18px; margin-top:12px;"><img src="assets/moringa-logo.jpg" alt="" style="height:74px; border-radius:10px;"><div style="font-family:var(--serif); font-weight:600; font-size:40px; color:var(--green-900); letter-spacing:.02em;">MORINGA</div></div>
+      </div>
+      <div style="flex:1; background:var(--green-900); border-radius:22px; padding:26px; display:flex; flex-direction:column;">
+        <div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--honey-200);">Vertical</div>
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px;"><img src="assets/moringa-logo-cream.png" alt="" style="height:110px;"><div style="font-family:var(--serif); font-weight:600; font-size:30px; color:var(--cream); letter-spacing:.04em;">MORINGA</div></div>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:30px;">
+      <div style="flex:1; background:var(--paper); border-radius:22px; padding:26px; display:flex; flex-direction:column; box-shadow:0 14px 36px rgba(31,77,43,.06);">
+        <div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Icône</div>
+        <div style="flex:1; display:flex; align-items:center; justify-content:center;"><img src="assets/moringa-logo.jpg" alt="" style="height:120px; border-radius:14px;"></div>
+      </div>
+      <div style="flex:1; background:var(--ink); border-radius:22px; padding:26px; display:flex; flex-direction:column;">
+        <div style="font-family:var(--sans); font-weight:700; font-size:24px; color:rgba(255,255,255,.7);">Monochrome</div>
+        <div style="flex:1; display:flex; align-items:center; justify-content:center;"><img src="assets/moringa-logo.jpg" alt="" style="height:120px; border-radius:14px; filter:grayscale(1) brightness(1.7) contrast(1.1);"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Zone &amp; tailles" data-screen-label="Clear space" data-speaker-notes="" style="height:100%; display:flex; padding:var(--pad-y) var(--pad-x); background:var(--cream-2); gap:64px;">
+  <div style="flex:1; display:flex; flex-direction:column;">
+    <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">02 · Charte graphique</div>
+    <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:30px;">Zone de protection<br>&amp; taille minimale</h2>
+    <p style="font-size:var(--type-body); color:var(--muted); line-height:1.5; max-width:560px;">Préservez toujours autour du logo une zone libre égale à la moitié de sa hauteur (1/2 X). Aucun texte ni élément graphique ne doit y pénétrer.</p>
+    <div style="margin-top:46px; display:flex; flex-direction:column; gap:22px;">
+      <div style="display:flex; align-items:center; gap:22px;"><div style="font-family:var(--sans); font-weight:800; font-size:30px; color:var(--green-900); width:130px;">40 mm</div><div style="font-size:var(--type-body); color:var(--ink);">Taille minimale — print</div></div>
+      <div style="height:1px; background:rgba(31,77,43,.15);"></div>
+      <div style="display:flex; align-items:center; gap:22px;"><div style="font-family:var(--sans); font-weight:800; font-size:30px; color:var(--green-900); width:130px;">96 px</div><div style="font-size:var(--type-body); color:var(--ink);">Taille minimale — digital</div></div>
+    </div>
+  </div>
+  <div style="flex:1; background:var(--paper); border-radius:24px; display:flex; align-items:center; justify-content:center; box-shadow:0 18px 50px rgba(31,77,43,.08); position:relative;">
+    <div style="position:relative; padding:90px;">
+      <div style="position:absolute; inset:0; border:2px dashed var(--green-500); border-radius:12px;"></div>
+      <div style="position:absolute; top:34px; left:50%; transform:translateX(-50%); font-family:'IBM Plex Mono',monospace; font-size:16px; color:var(--green-500);">½ X</div>
+      <div style="position:absolute; left:34px; top:50%; transform:translateY(-50%); font-family:'IBM Plex Mono',monospace; font-size:16px; color:var(--green-500);">½ X</div>
+      <img src="assets/moringa-logo.jpg" alt="" style="width:300px; border-radius:16px; display:block;">
+    </div>
+  </div>
+</section>
+
+<section data-label="Palette" data-screen-label="Palette" data-speaker-notes="" style="height:100%; display:flex; flex-direction:column; padding:var(--pad-y) var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">02 · Charte graphique</div>
+  <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:44px;">Palette de couleurs</h2>
+  <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:22px; flex:1;">
+    <div style="border-radius:18px; overflow:hidden; box-shadow:0 14px 32px rgba(31,77,43,.08); display:flex; flex-direction:column;"><div style="flex:1; background:#1F4D2B;"></div><div style="background:var(--paper); padding:18px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Vert Moringa</div><div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--muted); margin-top:8px; line-height:1.7;">HEX 1F4D2B<br>RGB 31·77·43<br>CMYK 60·0·44·70</div></div></div>
+    <div style="border-radius:18px; overflow:hidden; box-shadow:0 14px 32px rgba(31,77,43,.08); display:flex; flex-direction:column;"><div style="flex:1; background:#6BA368;"></div><div style="background:var(--paper); padding:18px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Vert Feuille</div><div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--muted); margin-top:8px; line-height:1.7;">HEX 6BA368<br>RGB 107·163·104<br>CMYK 34·0·36·36</div></div></div>
+    <div style="border-radius:18px; overflow:hidden; box-shadow:0 14px 32px rgba(31,77,43,.08); display:flex; flex-direction:column;"><div style="flex:1; background:#C9962E;"></div><div style="background:var(--paper); padding:18px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Or Miel</div><div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--muted); margin-top:8px; line-height:1.7;">HEX C9962E<br>RGB 201·150·46<br>CMYK 0·25·77·21</div></div></div>
+    <div style="border-radius:18px; overflow:hidden; box-shadow:0 14px 32px rgba(31,77,43,.08); display:flex; flex-direction:column;"><div style="flex:1; background:#E8CE8E;"></div><div style="background:var(--paper); padding:18px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Miel Clair</div><div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--muted); margin-top:8px; line-height:1.7;">HEX E8CE8E<br>RGB 232·206·142<br>CMYK 0·11·39·9</div></div></div>
+    <div style="border-radius:18px; overflow:hidden; box-shadow:0 14px 32px rgba(31,77,43,.08); display:flex; flex-direction:column;"><div style="flex:1; background:#F7F1E3;"></div><div style="background:var(--paper); padding:18px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Crème</div><div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--muted); margin-top:8px; line-height:1.7;">HEX F7F1E3<br>RGB 247·241·227<br>CMYK 0·2·8·3</div></div></div>
+    <div style="border-radius:18px; overflow:hidden; box-shadow:0 14px 32px rgba(31,77,43,.08); display:flex; flex-direction:column;"><div style="flex:1; background:#E7B7BB;"></div><div style="background:var(--paper); padding:18px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Rose Tendre</div><div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:var(--muted); margin-top:8px; line-height:1.7;">HEX E7B7BB<br>RGB 231·183·187<br>CMYK 0·21·19·9</div></div></div>
+  </div>
+  <div style="display:flex; gap:36px; margin-top:30px; font-size:var(--type-tiny); color:var(--muted);"><span><strong style="color:var(--green-900);">Primaires</strong> — verts &amp; or miel</span><span><strong style="color:var(--green-900);">Neutres</strong> — crème &amp; encre</span><span><strong style="color:var(--green-900);">Accent</strong> — rose, par petites touches</span></div>
+</section>
+
+<section data-label="Typographie" data-screen-label="Typographie" data-speaker-notes="" style="height:100%; display:flex; flex-direction:column; padding:var(--pad-y) var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">02 · Charte graphique</div>
+  <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:40px;">Système typographique</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:30px; flex:1;">
+    <div style="background:var(--paper); border-radius:22px; padding:42px; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column;"><div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-family:var(--sans); font-weight:800; font-size:30px; color:var(--green-900);">Archivo</div><div style="font-size:var(--type-tiny); color:var(--honey); font-weight:600;">Titres</div></div><div style="font-family:var(--sans); font-weight:800; font-size:64px; color:var(--ink); margin-top:auto;">Aa Gg Qq</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:10px;">Titres, accroches, packaging. Gras et affirmé.</p></div>
+    <div style="background:var(--paper); border-radius:22px; padding:42px; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column;"><div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-family:var(--body); font-weight:700; font-size:30px; color:var(--green-900);">Manrope</div><div style="font-size:var(--type-tiny); color:var(--honey); font-weight:600;">Corps de texte</div></div><div style="font-family:var(--body); font-weight:500; font-size:54px; color:var(--ink); margin-top:auto;">Aa Gg Qq</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:10px;">Paragraphes, descriptions, interface. Lisible et neutre.</p></div>
+    <div style="background:var(--green-900); border-radius:22px; padding:42px; display:flex; flex-direction:column;"><div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-family:var(--ar); font-weight:700; font-size:30px; color:var(--honey-200);">Tajawal</div><div style="font-size:var(--type-tiny); color:var(--honey-200); font-weight:600;">Arabe</div></div><div style="font-family:var(--ar); direction:rtl; font-size:52px; color:var(--cream); margin-top:auto;">طبيعي صحي بنين</div><p style="font-size:var(--type-tiny); color:rgba(247,241,227,.6); margin-top:10px;">Slogan, communication arabe, étiquettes bilingues.</p></div>
+    <div style="background:var(--paper); border-radius:22px; padding:42px; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column;"><div style="display:flex; justify-content:space-between; align-items:baseline;"><div style="font-family:var(--serif); font-weight:600; font-size:32px; color:var(--green-900);">Cormorant</div><div style="font-size:var(--type-tiny); color:var(--honey); font-weight:600;">Accent packaging</div></div><div style="font-family:var(--serif); font-weight:600; font-style:italic; font-size:58px; color:var(--ink); margin-top:auto;">Naturel &amp; frais</div><p style="font-size:var(--type-tiny); color:var(--muted); margin-top:10px;">Touches élégantes : étiquettes premium, coffrets.</p></div>
+  </div>
+</section>
+
+<section data-label="Motifs" data-screen-label="Motifs" data-speaker-notes="" style="height:100%; display:flex; flex-direction:column; padding:var(--pad-y) var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">02 · Charte graphique</div>
+  <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:18px;">Motifs &amp; éléments graphiques</h2>
+  <p style="font-size:var(--type-body); color:var(--muted); margin-bottom:44px; max-width:1000px;">Trois textures signature, inspirées de l'artisanat tunisien et de la nature, pour habiller packaging, réseaux sociaux et boutique.</p>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:30px; flex:1;">
+    <div style="border-radius:22px; overflow:hidden; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column;"><div style="flex:1; background-color:var(--green-900); background-image:linear-gradient(45deg,transparent 47%,rgba(232,206,142,.5) 48%,rgba(232,206,142,.5) 52%,transparent 53%),linear-gradient(-45deg,transparent 47%,rgba(232,206,142,.5) 48%,rgba(232,206,142,.5) 52%,transparent 53%); background-size:46px 46px;"></div><div style="background:var(--paper); padding:22px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Zellige</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Trame losange tunisienne</div></div></div>
+    <div style="border-radius:22px; overflow:hidden; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column;"><div style="flex:1; background-color:var(--cream); background-image:radial-gradient(circle at 30% 30%, var(--green-500) 0 9px, transparent 10px), radial-gradient(circle at 70% 70%, var(--honey) 0 7px, transparent 8px); background-size:90px 90px;"></div><div style="background:var(--paper); padding:22px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Pois Miel</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Texture douce &amp; gourmande</div></div></div>
+    <div style="border-radius:22px; overflow:hidden; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column;"><div style="flex:1; background:var(--green-700); display:flex; align-items:center; justify-content:center; gap:18px; padding:24px; flex-wrap:wrap; opacity:.95;"><div style="width:60px; height:90px; background:var(--green-500); border-radius:0 60px 0 60px; transform:rotate(15deg);"></div><div style="width:60px; height:90px; background:var(--honey-200); border-radius:0 60px 0 60px; transform:rotate(-12deg);"></div><div style="width:60px; height:90px; background:var(--cream); border-radius:0 60px 0 60px; transform:rotate(20deg);"></div><div style="width:60px; height:90px; background:var(--green-500); border-radius:0 60px 0 60px; transform:rotate(-18deg);"></div></div><div style="background:var(--paper); padding:22px;"><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Feuilles</div><div style="font-size:var(--type-tiny); color:var(--muted); margin-top:4px;">Motif issu du symbole Moringa</div></div></div>
+  </div>
+</section>
+
+<section data-label="03 Packaging" data-screen-label="Divider 03" data-speaker-notes="Part three: the packaging system across every product line." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative;">
+    <div style="font-family:var(--sans); font-weight:800; font-size:180px; color:var(--honey); line-height:1;">03</div>
+    <h2 style="font-size:88px; color:var(--cream); margin-top:8px;">Packaging produits</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:24px; max-width:820px; line-height:1.5;">Jus &amp; détox, miel, bsissa, zrir, coffrets cadeaux et VIP — un système d'étiquettes cohérent et reconnaissable en rayon.</p>
+  </div>
+</section>
+
+<section data-label="Jus &amp; Détox" data-screen-label="Packaging Juices" data-speaker-notes="Fresh juices and detox range. Each bottle: logo, 'Moringa Jus', flavor, and the principal ingredients shown fresh." style="height:100%; display:flex; flex-direction:column; padding:72px var(--pad-x); background:var(--cream);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:12px;">03 · Packaging</div>
+  <h2 style="font-size:56px; color:var(--green-900); margin-bottom:34px;">Jus frais &amp; gamme détox</h2>
+  <div style="display:flex; gap:46px; flex:1; align-items:stretch;">
+    <div style="display:flex; gap:30px; align-items:flex-end; padding-bottom:10px;">
+      <!--BOTTLE Orange-->
+      <div style="display:flex; flex-direction:column; align-items:center;"><div style="width:44px; height:30px; background:var(--green-900); border-radius:6px 6px 3px 3px;"></div><div style="width:30px; height:18px; background:#b5611a;"></div><div style="width:138px; height:286px; background:linear-gradient(180deg,#F39B2E,#E2761A); border-radius:20px 20px 26px 26px; position:relative; box-shadow:inset -16px 0 30px rgba(0,0,0,.18), 0 16px 30px rgba(0,0,0,.16); overflow:hidden;"><div style="position:absolute; left:9px; right:9px; top:78px; bottom:34px; background:var(--cream-2); border-radius:8px; padding:12px 10px; display:flex; flex-direction:column; align-items:center; text-align:center;"><img src="assets/moringa-logo.jpg" alt="" style="width:50px; border-radius:6px;"><div style="font-family:var(--sans); font-weight:800; font-size:17px; color:var(--green-900); margin-top:6px;">MORINGA JUS</div><div style="font-family:var(--serif); font-style:italic; font-size:18px; color:var(--honey); line-height:1.1;">Orange<br>Carotte</div><div style="font-family:var(--ar); direction:rtl; font-size:13px; color:var(--green-700); margin-top:4px;">طبيعي 100%</div></div></div></div>
+      <!--BOTTLE Detox green-->
+      <div style="display:flex; flex-direction:column; align-items:center;"><div style="width:44px; height:30px; background:var(--green-900); border-radius:6px 6px 3px 3px;"></div><div style="width:30px; height:18px; background:#2c6b2f;"></div><div style="width:138px; height:330px; background:linear-gradient(180deg,#7FB069,#3E7A3A); border-radius:20px 20px 26px 26px; position:relative; box-shadow:inset -16px 0 30px rgba(0,0,0,.18), 0 16px 30px rgba(0,0,0,.16); overflow:hidden;"><div style="position:absolute; left:9px; right:9px; top:96px; bottom:40px; background:var(--cream-2); border-radius:8px; padding:12px 10px; display:flex; flex-direction:column; align-items:center; text-align:center;"><img src="assets/moringa-logo.jpg" alt="" style="width:50px; border-radius:6px;"><div style="font-family:var(--sans); font-weight:800; font-size:17px; color:var(--green-900); margin-top:6px;">MORINGA DÉTOX</div><div style="font-family:var(--serif); font-style:italic; font-size:18px; color:var(--honey); line-height:1.1;">Vert<br>Menthe</div><div style="font-family:var(--ar); direction:rtl; font-size:13px; color:var(--green-700); margin-top:4px;">ديتوكس</div></div></div></div>
+      <!--BOTTLE pomegranate-->
+      <div style="display:flex; flex-direction:column; align-items:center;"><div style="width:44px; height:30px; background:var(--green-900); border-radius:6px 6px 3px 3px;"></div><div style="width:30px; height:18px; background:#7a132f;"></div><div style="width:138px; height:300px; background:linear-gradient(180deg,#C0334F,#8A1830); border-radius:20px 20px 26px 26px; position:relative; box-shadow:inset -16px 0 30px rgba(0,0,0,.18), 0 16px 30px rgba(0,0,0,.16); overflow:hidden;"><div style="position:absolute; left:9px; right:9px; top:84px; bottom:36px; background:var(--cream-2); border-radius:8px; padding:12px 10px; display:flex; flex-direction:column; align-items:center; text-align:center;"><img src="assets/moringa-logo.jpg" alt="" style="width:50px; border-radius:6px;"><div style="font-family:var(--sans); font-weight:800; font-size:17px; color:var(--green-900); margin-top:6px;">MORINGA JUS</div><div style="font-family:var(--serif); font-style:italic; font-size:18px; color:var(--honey); line-height:1.1;">Grenade<br>Betterave</div><div style="font-family:var(--ar); direction:rtl; font-size:13px; color:var(--green-700); margin-top:4px;">طبيعي 100%</div></div></div></div>
+    </div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:24px; justify-content:center;">
+      <div style="background:var(--paper); border-radius:20px; padding:34px; box-shadow:0 14px 36px rgba(31,77,43,.06);">
+        <div style="font-family:var(--sans); font-weight:700; font-size:26px; color:var(--green-900); margin-bottom:18px;">Anatomie de l'étiquette</div>
+        <div style="display:grid; grid-template-columns:auto 1fr; gap:14px 18px; font-size:21px; color:var(--ink);">
+          <span style="color:var(--honey); font-weight:700;">1</span><span>Logo Moringa en tête, sur fond crème</span>
+          <span style="color:var(--honey); font-weight:700;">2</span><span>Gamme : « Moringa Jus » / « Détox »</span>
+          <span style="color:var(--honey); font-weight:700;">3</span><span>Saveur en serif italique + visuel des ingrédients frais</span>
+          <span style="color:var(--honey); font-weight:700;">4</span><span>Mention « 100% naturel » bilingue FR / AR</span>
+        </div>
+      </div>
+      <div style="display:flex; gap:20px;">
+        <div style="flex:1; background:var(--green-900); border-radius:18px; padding:24px; color:var(--cream);"><div style="font-family:var(--sans); font-weight:700; font-size:21px; color:var(--honey-200);">Verso</div><p style="font-size:18px; line-height:1.5; margin-top:8px; color:rgba(247,241,227,.85);">Ingrédients · valeurs nutritionnelles · bienfaits · date limite · QR vers la fiche produit.</p></div>
+        <div style="flex:1; background:var(--honey); border-radius:18px; padding:24px; color:#3a2c08;"><div style="font-family:var(--sans); font-weight:700; font-size:21px;">Bouteille premium</div><p style="font-size:18px; line-height:1.5; margin-top:8px;">Verre dépoli, étiquette dorée à chaud, bouchon liège — pour la gamme cadeau.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Miel · Bsissa · Zrir" data-screen-label="Packaging Terroir" data-speaker-notes="Heritage products: honey jar, bsissa kraft pouch, zrir jar — kraft and honey tones." style="height:100%; display:flex; flex-direction:column; padding:72px var(--pad-x); background:var(--cream);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:12px;">03 · Packaging</div>
+  <h2 style="font-size:56px; color:var(--green-900); margin-bottom:14px;">Trésors du terroir</h2>
+  <p style="font-size:var(--type-body); color:var(--muted); margin-bottom:30px;">Miel premium, bsissa tunisienne et zrir — l'authenticité dans des contenants nobles.</p>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:34px; flex:1;">
+    <div style="background:var(--paper); border-radius:22px; padding:34px; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column; align-items:center;">
+      <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+        <div style="display:flex; flex-direction:column; align-items:center;"><div style="width:96px; height:24px; background:var(--green-900); border-radius:6px 6px 2px 2px;"></div><div style="width:150px; height:170px; background:linear-gradient(180deg,#E9A82A,#C9821E); border-radius:18px; position:relative; box-shadow:inset -14px 0 26px rgba(0,0,0,.16), 0 14px 26px rgba(0,0,0,.14); overflow:hidden; display:flex; align-items:center; justify-content:center;"><div style="background:var(--cream-2); border-radius:10px; padding:14px 12px; text-align:center; width:118px;"><img src="assets/moringa-logo.jpg" alt="" style="width:54px; border-radius:6px;"><div style="font-family:var(--sans); font-weight:800; font-size:18px; color:var(--green-900); margin-top:4px;">MORINGA MIEL</div><div style="font-family:var(--ar); direction:rtl; font-size:14px; color:var(--honey);">عسل طبيعي</div></div></div></div>
+      </div>
+      <div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900); margin-top:22px;">Miel naturel</div>
+      <div style="font-size:18px; color:var(--muted); margin-top:4px;">Pot verre · couvercle vert · sceau doré</div>
+    </div>
+    <div style="background:var(--paper); border-radius:22px; padding:34px; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column; align-items:center;">
+      <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+        <div style="width:158px; height:215px; background:linear-gradient(180deg,#C9A877,#A8855A); border-radius:8px 8px 10px 10px; position:relative; box-shadow:0 14px 26px rgba(0,0,0,.16); overflow:hidden; display:flex; flex-direction:column; align-items:center;"><div style="width:100%; height:18px; background:#5a4326;"></div><div style="background:var(--cream-2); border-radius:10px; padding:14px 12px; text-align:center; width:120px; margin-top:34px;"><img src="assets/moringa-logo.jpg" alt="" style="width:54px; border-radius:6px;"><div style="font-family:var(--sans); font-weight:800; font-size:18px; color:var(--green-900); margin-top:4px;">MORINGA BSISSA</div><div style="font-family:var(--serif); font-style:italic; font-size:15px; color:var(--honey);">Tunisienne</div><div style="font-family:var(--ar); direction:rtl; font-size:13px; color:var(--green-700); margin-top:2px;">بسيسة تونسية</div></div></div>
+      </div>
+      <div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900); margin-top:22px;">Bsissa tunisienne</div>
+      <div style="font-size:18px; color:var(--muted); margin-top:4px;">Pochette kraft · fenêtre · refermable</div>
+    </div>
+    <div style="background:var(--paper); border-radius:22px; padding:34px; box-shadow:0 14px 36px rgba(31,77,43,.06); display:flex; flex-direction:column; align-items:center;">
+      <div style="flex:1; display:flex; align-items:center; justify-content:center;">
+        <div style="display:flex; flex-direction:column; align-items:center;"><div style="width:104px; height:22px; background:var(--honey); border-radius:6px 6px 2px 2px;"></div><div style="width:150px; height:160px; background:linear-gradient(180deg,#8C6A3F,#6E5230); border-radius:16px; position:relative; box-shadow:inset -14px 0 26px rgba(0,0,0,.18), 0 14px 26px rgba(0,0,0,.14); overflow:hidden; display:flex; align-items:center; justify-content:center;"><div style="background:var(--cream-2); border-radius:10px; padding:14px 12px; text-align:center; width:118px;"><img src="assets/moringa-logo.jpg" alt="" style="width:54px; border-radius:6px;"><div style="font-family:var(--sans); font-weight:800; font-size:18px; color:var(--green-900); margin-top:4px;">MORINGA ZRIR</div><div style="font-family:var(--ar); direction:rtl; font-size:14px; color:var(--honey);">زريرة تونسية</div></div></div></div>
+      </div>
+      <div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900); margin-top:22px;">Zrir tunisien</div>
+      <div style="font-size:18px; color:var(--muted); margin-top:4px;">Pot verre · cuillère bois · sceau</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Coffrets &amp; VIP" data-screen-label="Packaging Gift" data-speaker-notes="Gift boxes and VIP luxury boxes — magnetic boxes, dried flowers, gold foil, personalized card." style="height:100%; display:flex; background:var(--green-900);">
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x);">
+    <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey-200); text-transform:uppercase; margin-bottom:14px;">03 · Packaging</div>
+    <h2 style="font-size:var(--type-title); color:var(--cream); margin-bottom:26px;">Coffrets cadeaux &amp; VIP</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.82); line-height:1.5; max-width:560px;">Pour mariages, fiançailles, réussite au bac, cadeaux d'entreprise. Du coffret découverte au coffret VIP en édition limitée.</p>
+    <div style="display:flex; flex-direction:column; gap:18px; margin-top:40px;">
+      <div style="display:flex; gap:18px; align-items:center;"><div style="width:14px; height:14px; border-radius:50%; background:var(--honey);"></div><span style="font-size:24px; color:var(--cream);">Boîte aimantée rigide, gainage crème &amp; vert</span></div>
+      <div style="display:flex; gap:18px; align-items:center;"><div style="width:14px; height:14px; border-radius:50%; background:var(--honey);"></div><span style="font-size:24px; color:var(--cream);">Marquage à chaud or du logo &amp; du slogan</span></div>
+      <div style="display:flex; gap:18px; align-items:center;"><div style="width:14px; height:14px; border-radius:50%; background:var(--honey);"></div><span style="font-size:24px; color:var(--cream);">Carte personnalisée + ruban &amp; fleurs séchées (VIP)</span></div>
+    </div>
+  </div>
+  <div style="width:760px; padding:var(--pad-y) 80px var(--pad-y) 0; display:flex; gap:30px; align-items:center;">
+    <div style="flex:1; height:62%; background:linear-gradient(160deg,#2a5a36,#23502d); border:2px solid rgba(232,206,142,.4); border-radius:20px; padding:30px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 26px 50px rgba(0,0,0,.3);"><div style="font-family:var(--sans); font-weight:700; font-size:22px; letter-spacing:.2em; color:var(--honey-200);">COFFRET DÉCOUVERTE</div><div style="display:flex; justify-content:center;"><img src="assets/moringa-logo-cream.png" alt="" style="width:150px;"></div><div style="font-family:var(--serif); font-style:italic; font-size:24px; color:var(--cream);">Jus · Miel · Bsissa</div></div>
+    <div style="flex:1; height:80%; background:linear-gradient(160deg,#1b3f24,#142e1a); border:2px solid var(--honey); border-radius:20px; padding:30px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 30px 60px rgba(0,0,0,.4); position:relative;"><div style="position:absolute; top:18px; right:18px; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:800; font-size:14px; letter-spacing:.12em; padding:6px 12px; border-radius:100px;">VIP</div><div style="font-family:var(--sans); font-weight:700; font-size:22px; letter-spacing:.2em; color:var(--honey); padding-right:90px;">ÉDITION LUXE</div><div style="display:flex; justify-content:center;"><img src="assets/moringa-logo-cream.png" alt="" style="width:172px; filter:drop-shadow(0 16px 24px rgba(0,0,0,.45));"></div><div style="font-family:var(--serif); font-style:italic; font-size:24px; color:var(--honey-200);">Miel premium &amp; sélection</div></div>
+  </div>
+</section>
+
+<section data-label="04 Retail" data-screen-label="Divider 04" data-speaker-notes="Part four: the retail experience — a Tunisian wellness boutique." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative;">
+    <div style="font-family:var(--sans); font-weight:800; font-size:180px; color:var(--honey); line-height:1;">04</div>
+    <h2 style="font-size:88px; color:var(--cream); margin-top:8px;">Expérience retail</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:24px; max-width:820px; line-height:1.5;">Une boutique qui mêle la chaleur de la Tunisie traditionnelle et l'élégance d'un concept-store wellness moderne.</p>
+  </div>
+</section>
+
+<section data-label="Concept boutique" data-screen-label="Retail concept" data-speaker-notes="Store zones: facade, juice counter, honey display, premium corner, gift corner, checkout, waiting." style="height:100%; display:flex; flex-direction:column; padding:72px var(--pad-x); background:var(--cream);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:12px;">04 · Retail</div>
+  <h2 style="font-size:56px; color:var(--green-900); margin-bottom:30px;">Concept de boutique</h2>
+  <div style="display:grid; grid-template-columns:1.5fr 1fr 1fr; grid-template-rows:1fr 1fr; gap:24px; flex:1;">
+    <div style="grid-row:span 2; border-radius:22px; background:linear-gradient(160deg,#23502d,#1b3f24); padding:40px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 16px 40px rgba(31,77,43,.14); position:relative; overflow:hidden;"><div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(232,206,142,.07) 49%,rgba(232,206,142,.07) 51%,transparent 52%); background-size:40px 40px;"></div><div style="position:relative;"><div style="font-family:var(--sans); font-weight:700; font-size:22px; letter-spacing:.2em; color:var(--honey-200);">FAÇADE &amp; ENSEIGNE</div><p style="font-size:21px; color:rgba(247,241,227,.82); margin-top:14px; line-height:1.5; max-width:330px;">Enseigne en lettres laiton sur fond vert, logo rétroéclairé, devanture vitrée avec comptoir à jus visible de la rue.</p></div><div style="position:relative; background:var(--cream); border-radius:16px; padding:26px 20px; display:flex; flex-direction:column; align-items:center;"><img src="assets/moringa-logo.jpg" alt="" style="width:120px; border-radius:12px;"><div style="font-family:var(--ar); direction:rtl; font-size:18px; color:var(--green-900); margin-top:10px;">طبيعي، صحي، وبنين</div></div></div>
+    <div style="border-radius:22px; background:var(--paper); padding:28px; box-shadow:0 14px 32px rgba(31,77,43,.06); display:flex; flex-direction:column; justify-content:flex-end;"><div style="width:46px; height:46px; border-radius:50%; background:var(--honey); margin-bottom:auto;"></div><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Comptoir à jus</div><p style="font-size:17px; color:var(--muted); margin-top:6px; line-height:1.4;">Bar à fruits frais, presse visible, tabourets bois.</p></div>
+    <div style="border-radius:22px; background:var(--paper); padding:28px; box-shadow:0 14px 32px rgba(31,77,43,.06); display:flex; flex-direction:column; justify-content:flex-end;"><div style="width:46px; height:46px; border-radius:50%; background:var(--green-500); margin-bottom:auto;"></div><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Mur du miel</div><p style="font-size:17px; color:var(--muted); margin-top:6px; line-height:1.4;">Étagères rétroéclairées, pots ambrés alignés.</p></div>
+    <div style="border-radius:22px; background:var(--ink); padding:28px; display:flex; flex-direction:column; justify-content:flex-end;"><div style="width:46px; height:46px; border-radius:50%; background:var(--honey-200); margin-bottom:auto;"></div><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--cream);">Corner premium</div><p style="font-size:17px; color:rgba(255,255,255,.6); margin-top:6px; line-height:1.4;">Espace VIP, coffrets, ambiance feutrée.</p></div>
+    <div style="border-radius:22px; background:var(--paper); padding:28px; box-shadow:0 14px 32px rgba(31,77,43,.06); display:flex; flex-direction:column; justify-content:flex-end;"><div style="width:46px; height:46px; border-radius:50%; background:var(--pink); margin-bottom:auto;"></div><div style="font-family:var(--sans); font-weight:700; font-size:24px; color:var(--green-900);">Corner cadeaux + caisse</div><p style="font-size:17px; color:var(--muted); margin-top:6px; line-height:1.4;">Table d'emballage, ruban, espace d'attente cosy.</p></div>
+  </div>
+</section>
+
+<section data-label="05 Réseaux" data-screen-label="Divider 05" data-speaker-notes="Part five: the social media template system." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative;">
+    <div style="font-family:var(--sans); font-weight:800; font-size:180px; color:var(--honey); line-height:1;">05</div>
+    <h2 style="font-size:88px; color:var(--cream); margin-top:8px;">Réseaux sociaux</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:24px; max-width:820px; line-height:1.5;">Un kit de templates cohérent : posts, stories, promotions, lancements et offres événementielles.</p>
+  </div>
+</section>
+
+<section data-label="Templates social" data-screen-label="Social templates" data-speaker-notes="Instagram post, story, promo and event templates — consistent system." style="height:100%; display:flex; flex-direction:column; padding:72px var(--pad-x); background:var(--cream);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:12px;">05 · Réseaux sociaux</div>
+  <h2 style="font-size:56px; color:var(--green-900); margin-bottom:30px;">Système de templates</h2>
+  <div style="display:flex; gap:32px; flex:1; align-items:stretch; justify-content:center;">
+    <div style="width:360px; background:linear-gradient(165deg,#23502d,#1b3f24); border-radius:20px; padding:30px; display:flex; flex-direction:column; box-shadow:0 18px 40px rgba(31,77,43,.18); position:relative; overflow:hidden;"><div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(232,206,142,.07) 49%,rgba(232,206,142,.07) 51%,transparent 52%); background-size:38px 38px;"></div><div style="position:relative; display:flex; align-items:center; gap:12px;"><img src="assets/moringa-logo-cream.png" alt="" style="width:54px;"><div style="font-family:var(--sans); font-weight:700; font-size:18px; color:var(--cream);">moringa.tn</div></div><div style="position:relative; flex:1; display:flex; flex-direction:column; justify-content:center; text-align:center;"><div style="font-family:var(--sans); font-weight:800; font-size:38px; color:var(--cream); line-height:1.1;">Pressé<br>du jour</div><div style="font-family:var(--serif); font-style:italic; font-size:24px; color:var(--honey-200); margin-top:14px;">Jus 100% naturels</div></div><div style="position:relative; align-self:center; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:700; font-size:17px; padding:11px 26px; border-radius:100px;">Commander</div><div style="position:relative; text-align:center; font-size:14px; color:var(--honey-200); margin-top:14px; letter-spacing:.06em;">POST FEED · 1080×1080</div></div>
+    <div style="width:230px; background:linear-gradient(180deg,#E9A82A,#C9821E); border-radius:20px; padding:24px; display:flex; flex-direction:column; box-shadow:0 18px 40px rgba(201,150,46,.28);"><div style="display:flex; justify-content:center;"><img src="assets/moringa-logo.jpg" alt="" style="width:64px; border-radius:10px;"></div><div style="flex:1; display:flex; flex-direction:column; justify-content:center; text-align:center;"><div style="font-family:var(--ar); direction:rtl; font-size:30px; font-weight:700; color:#3a2c08;">عرض اليوم</div><div style="font-family:var(--sans); font-weight:800; font-size:46px; color:var(--paper); line-height:1; margin-top:10px;">-20%</div><div style="font-family:var(--sans); font-weight:600; font-size:18px; color:#3a2c08; margin-top:8px;">sur tous les jus détox</div></div><div style="background:var(--green-900); color:var(--cream); font-family:var(--sans); font-weight:700; font-size:15px; padding:10px; border-radius:100px; text-align:center;">Swipe up</div><div style="text-align:center; font-size:12px; color:#3a2c08; margin-top:12px; letter-spacing:.06em;">STORY · 1080×1920</div></div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:24px;">
+      <div style="flex:1; background:var(--paper); border-radius:20px; padding:30px; box-shadow:0 14px 32px rgba(31,77,43,.06); display:flex; gap:24px; align-items:center;"><div style="width:120px; height:120px; border-radius:16px; background:repeating-linear-gradient(135deg,#eee 0 10px,#e3e3e3 10px 20px); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#999; text-align:center;">photo<br>produit</div><div><div style="font-family:var(--sans); font-weight:600; font-size:16px; letter-spacing:.2em; color:var(--honey); text-transform:uppercase;">Nouveauté</div><div style="font-family:var(--sans); font-weight:800; font-size:32px; color:var(--green-900); margin-top:6px; line-height:1.1;">Smoothie<br>Mangue &amp; Moringa</div></div></div>
+      <div style="flex:1; background:var(--ink); border-radius:20px; padding:30px; display:flex; gap:24px; align-items:center;"><div><div style="font-family:var(--sans); font-weight:600; font-size:16px; letter-spacing:.2em; color:var(--honey-200); text-transform:uppercase;">Offre mariage</div><div style="font-family:var(--sans); font-weight:800; font-size:30px; color:var(--cream); margin-top:6px; line-height:1.1;">Coffrets pour vos<br>invités d'honneur</div><div style="font-family:var(--serif); font-style:italic; font-size:20px; color:var(--honey-200); margin-top:8px;">Sur-mesure · livraison incluse</div></div><div style="margin-left:auto; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:700; font-size:15px; padding:10px 20px; border-radius:100px; white-space:nowrap;">Demander un devis</div></div>
+    </div>
+  </div>
+</section>
+
+<section data-label="06 E-commerce" data-screen-label="Divider 06" data-speaker-notes="Part six: the e-commerce website and mobile app." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative;">
+    <div style="font-family:var(--sans); font-weight:800; font-size:180px; color:var(--honey); line-height:1;">06</div>
+    <h2 style="font-size:88px; color:var(--cream); margin-top:8px;">E-commerce &amp; App</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:24px; max-width:820px; line-height:1.5;">Site web premium, page produit, système de réservation, espace VIP — et l'application mobile.</p>
+  </div>
+</section>
+
+<section data-label="Site — Accueil" data-screen-label="Web Home" data-speaker-notes="Homepage: hero, featured products, event services, reservation CTA." style="height:100%; display:flex; flex-direction:column; padding:60px var(--pad-x); background:var(--cream);">
+  <div style="display:flex; align-items:baseline; gap:24px; margin-bottom:24px;"><div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase;">06 · E-commerce</div><h2 style="font-size:42px; color:var(--green-900);">Page d'accueil</h2></div>
+  <div style="flex:1; background:var(--paper); border-radius:18px 18px 0 0; box-shadow:0 24px 60px rgba(31,77,43,.16); overflow:hidden; display:flex; flex-direction:column;">
+    <div style="height:44px; background:#e9e3d4; display:flex; align-items:center; padding:0 20px; gap:8px;"><div style="width:12px; height:12px; border-radius:50%; background:#d98b8b;"></div><div style="width:12px; height:12px; border-radius:50%; background:#e8c97a;"></div><div style="width:12px; height:12px; border-radius:50%; background:#9bc48f;"></div><div style="margin-left:18px; background:#fff; border-radius:8px; padding:5px 18px; font-family:'IBM Plex Mono',monospace; font-size:14px; color:#777;">moringa.tn</div></div>
+    <div style="height:64px; background:var(--paper); border-bottom:1px solid #eee; display:flex; align-items:center; padding:0 40px; gap:28px;"><img src="assets/moringa-logo-transparent.png" alt="" style="height:42px;"><div style="font-family:var(--serif); font-weight:600; font-size:24px; color:var(--green-900); letter-spacing:.04em;">MORINGA</div><div style="display:flex; gap:26px; margin-left:30px; font-family:var(--sans); font-weight:600; font-size:17px; color:var(--ink);"><span>Accueil</span><span>Produits</span><span>Événements</span><span style="color:var(--honey);">VIP</span><span>Contact</span></div><div style="margin-left:auto; display:flex; gap:14px; align-items:center;"><div style="background:var(--green-900); color:var(--cream); font-family:var(--sans); font-weight:700; font-size:15px; padding:9px 20px; border-radius:100px;">Réserver</div><div style="width:38px; height:38px; border-radius:50%; border:2px solid var(--green-900);"></div></div></div>
+    <div style="flex:1; display:flex;">
+      <div style="flex:1.1; background:linear-gradient(160deg,#23502d,#1b3f24); padding:54px; display:flex; flex-direction:column; justify-content:center; position:relative; overflow:hidden;"><div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(232,206,142,.06) 49%,rgba(232,206,142,.06) 51%,transparent 52%); background-size:40px 40px;"></div><div style="position:relative;"><div style="font-family:var(--ar); direction:rtl; font-size:24px; color:var(--honey-200);">طبيعي، صحي، وبنين</div><div style="font-family:var(--sans); font-weight:800; font-size:54px; color:var(--cream); line-height:1.05; margin-top:14px;">Le meilleur de<br>la nature, pressé<br>pour vous.</div><div style="display:flex; gap:14px; margin-top:30px;"><div style="background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:700; font-size:18px; padding:14px 30px; border-radius:100px;">Commander</div><div style="border:2px solid var(--honey-200); color:var(--cream); font-family:var(--sans); font-weight:700; font-size:18px; padding:12px 28px; border-radius:100px;">Nos coffrets</div></div></div></div>
+      <div style="flex:.9; background:repeating-linear-gradient(135deg,#efeadd 0 14px,#e7e1d2 14px 28px); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:15px; color:#9a9482; text-align:center;"><div><div style="width:90px; height:90px; border:2px dashed #b3ab97; border-radius:14px; margin:0 auto 14px;"></div>[ photo hero<br>jus &amp; fruits frais ]</div></div>
+    </div>
+    <div style="height:178px; background:var(--cream-2); display:flex; align-items:center; gap:24px; padding:0 40px;"><div style="font-family:var(--sans); font-weight:700; font-size:22px; color:var(--green-900); writing-mode:vertical-rl; transform:rotate(180deg);">À la une</div><div style="flex:1; display:flex; gap:20px;"><div style="flex:1; background:var(--paper); border-radius:14px; padding:16px; box-shadow:0 8px 20px rgba(31,77,43,.06); display:flex; gap:14px; align-items:center;"><div style="width:60px; height:84px; background:linear-gradient(180deg,#F39B2E,#E2761A); border-radius:8px;"></div><div><div style="font-family:var(--sans); font-weight:700; font-size:18px; color:var(--green-900);">Jus Orange-Carotte</div><div style="font-size:15px; color:var(--muted);">8,5 DT</div></div></div><div style="flex:1; background:var(--paper); border-radius:14px; padding:16px; box-shadow:0 8px 20px rgba(31,77,43,.06); display:flex; gap:14px; align-items:center;"><div style="width:60px; height:84px; background:linear-gradient(180deg,#7FB069,#3E7A3A); border-radius:8px;"></div><div><div style="font-family:var(--sans); font-weight:700; font-size:18px; color:var(--green-900);">Détox Vert</div><div style="font-size:15px; color:var(--muted);">9 DT</div></div></div><div style="flex:1; background:var(--paper); border-radius:14px; padding:16px; box-shadow:0 8px 20px rgba(31,77,43,.06); display:flex; gap:14px; align-items:center;"><div style="width:60px; height:84px; background:linear-gradient(180deg,#E9A82A,#C9821E); border-radius:8px;"></div><div><div style="font-family:var(--sans); font-weight:700; font-size:18px; color:var(--green-900);">Miel naturel</div><div style="font-size:15px; color:var(--muted);">24 DT</div></div></div></div></div>
+  </div>
+</section>
+
+<section data-label="Site — Produit" data-screen-label="Web Product" data-speaker-notes="Product page: gallery, description, ingredients, benefits, nutrition, reserve + WhatsApp." style="height:100%; display:flex; flex-direction:column; padding:60px var(--pad-x); background:var(--cream);">
+  <div style="display:flex; align-items:baseline; gap:24px; margin-bottom:24px;"><div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase;">06 · E-commerce</div><h2 style="font-size:42px; color:var(--green-900);">Page produit</h2></div>
+  <div style="flex:1; background:var(--paper); border-radius:18px; box-shadow:0 24px 60px rgba(31,77,43,.16); overflow:hidden; display:flex;">
+    <div style="width:46%; background:var(--cream-2); padding:46px; display:flex; gap:24px;">
+      <div style="display:flex; flex-direction:column; gap:14px;"><div style="width:74px; height:74px; border-radius:10px; background:linear-gradient(180deg,#7FB069,#3E7A3A); border:2px solid var(--green-900);"></div><div style="width:74px; height:74px; border-radius:10px; background:repeating-linear-gradient(135deg,#e9e3d4 0 8px,#e0d9c8 8px 16px);"></div><div style="width:74px; height:74px; border-radius:10px; background:repeating-linear-gradient(135deg,#e9e3d4 0 8px,#e0d9c8 8px 16px);"></div></div>
+      <div style="flex:1; border-radius:16px; background:linear-gradient(180deg,#8cc079,#3E7A3A); display:flex; align-items:center; justify-content:center; position:relative;"><div style="background:var(--cream-2); border-radius:12px; padding:18px 14px; text-align:center; width:140px;"><img src="assets/moringa-logo-transparent.png" alt="" style="width:74px;"><div style="font-family:var(--sans); font-weight:800; font-size:18px; color:var(--green-900); margin-top:4px;">DÉTOX VERT</div></div></div>
+    </div>
+    <div style="flex:1; padding:46px 50px; display:flex; flex-direction:column;">
+      <div style="font-family:var(--sans); font-weight:600; font-size:16px; letter-spacing:.2em; color:var(--honey); text-transform:uppercase;">Gamme détox</div>
+      <div style="font-family:var(--sans); font-weight:800; font-size:40px; color:var(--green-900); margin-top:6px;">Jus Détox Vert &amp; Menthe</div>
+      <div style="font-family:var(--sans); font-weight:800; font-size:30px; color:var(--ink); margin-top:10px;">9,00 DT <span style="font-size:18px; font-weight:600; color:var(--muted);">/ 33cl</span></div>
+      <p style="font-size:19px; color:var(--muted); line-height:1.5; margin-top:18px;">Pressé à froid le matin même. Concombre, pomme verte, épinard, menthe et citron — pour faire le plein de fraîcheur et d'énergie.</p>
+      <div style="display:flex; gap:14px; margin-top:22px;"><div style="background:var(--cream-2); border-radius:12px; padding:14px 18px;"><div style="font-size:13px; color:var(--muted);">Calories</div><div style="font-family:var(--sans); font-weight:700; font-size:22px; color:var(--green-900);">68 kcal</div></div><div style="background:var(--cream-2); border-radius:12px; padding:14px 18px;"><div style="font-size:13px; color:var(--muted);">Sucres</div><div style="font-family:var(--sans); font-weight:700; font-size:22px; color:var(--green-900);">9 g</div></div><div style="background:var(--cream-2); border-radius:12px; padding:14px 18px;"><div style="font-size:13px; color:var(--muted);">Vit. C</div><div style="font-family:var(--sans); font-weight:700; font-size:22px; color:var(--green-900);">45%</div></div></div>
+      <div style="display:flex; gap:10px; margin-top:20px; flex-wrap:wrap;"><span style="background:#eaf2e6; color:var(--green-900); font-size:15px; font-weight:600; padding:7px 14px; border-radius:100px;">Sans sucre ajouté</span><span style="background:#eaf2e6; color:var(--green-900); font-size:15px; font-weight:600; padding:7px 14px; border-radius:100px;">Détoxifiant</span><span style="background:#eaf2e6; color:var(--green-900); font-size:15px; font-weight:600; padding:7px 14px; border-radius:100px;">Riche en fibres</span></div>
+      <div style="margin-top:auto; display:flex; gap:14px; padding-top:24px;"><div style="flex:1; background:var(--green-900); color:var(--cream); font-family:var(--sans); font-weight:700; font-size:20px; padding:16px; border-radius:100px; text-align:center;">Réserver ce produit</div><div style="background:#25D366; color:#fff; font-family:var(--sans); font-weight:700; font-size:20px; padding:16px 26px; border-radius:100px;">WhatsApp</div></div>
+    </div>
+  </div>
+</section>
+
+<section data-label="Réservation &amp; VIP" data-screen-label="Web Reservation VIP" data-speaker-notes="Reservation flow and the VIP members area." style="height:100%; display:flex; flex-direction:column; padding:72px var(--pad-x); background:var(--green-900);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey-200); text-transform:uppercase; margin-bottom:12px;">06 · E-commerce</div>
+  <h2 style="font-size:56px; color:var(--cream); margin-bottom:34px;">Réservation &amp; espace VIP</h2>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:40px; flex:1;">
+    <div style="background:var(--cream); border-radius:22px; padding:42px; display:flex; flex-direction:column;">
+      <div style="font-family:var(--sans); font-weight:700; font-size:28px; color:var(--green-900);">Réserver en 3 étapes</div>
+      <div style="display:flex; flex-direction:column; gap:18px; margin-top:26px;">
+        <div style="display:flex; gap:18px; align-items:center;"><div style="width:42px; height:42px; border-radius:50%; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:800; font-size:20px; display:flex; align-items:center; justify-content:center;">1</div><div style="font-size:22px; color:var(--ink);">Choisir produits &amp; quantités</div></div>
+        <div style="display:flex; gap:18px; align-items:center;"><div style="width:42px; height:42px; border-radius:50%; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:800; font-size:20px; display:flex; align-items:center; justify-content:center;">2</div><div style="font-size:22px; color:var(--ink);">Date de retrait ou livraison</div></div>
+        <div style="display:flex; gap:18px; align-items:center;"><div style="width:42px; height:42px; border-radius:50%; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:800; font-size:20px; display:flex; align-items:center; justify-content:center;">3</div><div style="font-size:22px; color:var(--ink);">Confirmer — paiement en boutique ou en ligne</div></div>
+      </div>
+      <div style="margin-top:auto; display:flex; gap:12px; padding-top:24px;"><div style="background:var(--cream-2); border:1px solid #ddd4bf; border-radius:12px; padding:14px 20px; font-family:var(--sans); font-weight:600; color:var(--green-900);">Retrait boutique</div><div style="background:var(--cream-2); border:1px solid #ddd4bf; border-radius:12px; padding:14px 20px; font-family:var(--sans); font-weight:600; color:var(--green-900);">Livraison</div><div style="background:var(--green-900); color:var(--cream); border-radius:12px; padding:14px 20px; font-family:var(--sans); font-weight:600;">Pack événement</div></div>
+    </div>
+    <div style="background:linear-gradient(160deg,#1b3f24,#142e1a); border:2px solid var(--honey); border-radius:22px; padding:42px; display:flex; flex-direction:column; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:24px; right:24px; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:800; font-size:15px; letter-spacing:.12em; padding:7px 16px; border-radius:100px;">VIP</div>
+      <div style="font-family:var(--serif); font-style:italic; font-size:30px; color:var(--honey-200); padding-right:90px;">Espace VIP</div>
+      <div style="font-family:var(--sans); font-weight:800; font-size:32px; color:var(--cream); margin-top:8px; line-height:1.15;">Produits exclusifs &amp;<br>commandes personnalisées</div>
+      <div style="display:flex; flex-direction:column; gap:14px; margin-top:26px;">
+        <div style="display:flex; gap:14px; align-items:center;"><div style="width:10px; height:10px; border-radius:50%; background:var(--honey);"></div><span style="font-size:21px; color:rgba(247,241,227,.9);">Coffrets de luxe en édition limitée</span></div>
+        <div style="display:flex; gap:14px; align-items:center;"><div style="width:10px; height:10px; border-radius:50%; background:var(--honey);"></div><span style="font-size:21px; color:rgba(247,241,227,.9);">Cadeaux d'entreprise personnalisés</span></div>
+        <div style="display:flex; gap:14px; align-items:center;"><div style="width:10px; height:10px; border-radius:50%; background:var(--honey);"></div><span style="font-size:21px; color:rgba(247,241,227,.9);">Miel premium &amp; sélections privées</span></div>
+        <div style="display:flex; gap:14px; align-items:center;"><div style="width:10px; height:10px; border-radius:50%; background:var(--honey);"></div><span style="font-size:21px; color:rgba(247,241,227,.9);">Conseiller dédié &amp; accès prioritaire</span></div>
+      </div>
+      <div style="margin-top:auto; align-self:flex-start; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:700; font-size:19px; padding:14px 30px; border-radius:100px;">Rejoindre le cercle VIP</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="App mobile" data-screen-label="Mobile app" data-speaker-notes="iOS and Android app: catalog, reservations, loyalty points, VIP membership, event orders." style="height:100%; display:flex; padding:72px var(--pad-x); background:var(--cream); gap:60px;">
+  <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+    <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:14px;">06 · Application mobile</div>
+    <h2 style="font-size:var(--type-title); color:var(--green-900); margin-bottom:24px;">L'app Moringa<br>iOS &amp; Android</h2>
+    <p style="font-size:var(--type-body); color:var(--muted); line-height:1.5; max-width:520px;">Toute la fraîcheur Moringa dans la poche : catalogue, réservation en un geste, fidélité et avantages VIP.</p>
+    <div style="display:flex; flex-direction:column; gap:16px; margin-top:34px;">
+      <div style="display:flex; gap:16px; align-items:center;"><div style="width:12px; height:12px; border-radius:50%; background:var(--green-500);"></div><span style="font-size:23px; color:var(--ink);">Catalogue produits &amp; réservation</span></div>
+      <div style="display:flex; gap:16px; align-items:center;"><div style="width:12px; height:12px; border-radius:50%; background:var(--honey);"></div><span style="font-size:23px; color:var(--ink);">Points de fidélité &amp; récompenses</span></div>
+      <div style="display:flex; gap:16px; align-items:center;"><div style="width:12px; height:12px; border-radius:50%; background:var(--green-900);"></div><span style="font-size:23px; color:var(--ink);">Carte de membre VIP</span></div>
+      <div style="display:flex; gap:16px; align-items:center;"><div style="width:12px; height:12px; border-radius:50%; background:var(--pink);"></div><span style="font-size:23px; color:var(--ink);">Commandes événements &amp; cadeaux</span></div>
+    </div>
+  </div>
+  <div style="flex:1; display:flex; align-items:center; justify-content:center; gap:34px;">
+    <div style="width:280px; height:580px; background:#10210f; border-radius:42px; padding:12px; box-shadow:0 30px 60px rgba(31,77,43,.28); transform:translateY(20px);">
+      <div style="width:100%; height:100%; background:var(--cream-2); border-radius:32px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="background:var(--green-900); padding:26px 22px 22px; position:relative;"><div style="position:absolute; top:10px; left:50%; transform:translateX(-50%); width:90px; height:6px; background:rgba(255,255,255,.25); border-radius:4px;"></div><div style="display:flex; align-items:center; gap:10px; margin-top:8px;"><img src="assets/moringa-logo-cream.png" alt="" style="height:34px;"><div style="font-family:var(--serif); font-weight:600; font-size:18px; color:var(--cream);">MORINGA</div></div><div style="font-family:var(--sans); font-weight:800; font-size:24px; color:var(--cream); margin-top:16px;">Bonjour 👋</div><div style="font-size:14px; color:var(--honey-200);">Que pressons-nous aujourd'hui ?</div></div>
+        <div style="padding:18px; display:flex; flex-direction:column; gap:14px; flex:1;"><div style="font-family:var(--sans); font-weight:700; font-size:16px; color:var(--green-900);">Nos jus frais</div><div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;"><div style="background:#fff; border-radius:14px; padding:12px; box-shadow:0 6px 14px rgba(31,77,43,.06);"><div style="height:74px; background:linear-gradient(180deg,#F39B2E,#E2761A); border-radius:10px;"></div><div style="font-size:13px; font-weight:700; color:var(--green-900); margin-top:8px;">Orange-Carotte</div><div style="font-size:12px; color:var(--muted);">8,5 DT</div></div><div style="background:#fff; border-radius:14px; padding:12px; box-shadow:0 6px 14px rgba(31,77,43,.06);"><div style="height:74px; background:linear-gradient(180deg,#7FB069,#3E7A3A); border-radius:10px;"></div><div style="font-size:13px; font-weight:700; color:var(--green-900); margin-top:8px;">Détox Vert</div><div style="font-size:12px; color:var(--muted);">9 DT</div></div></div></div>
+        <div style="background:#fff; border-top:1px solid #eee; padding:12px 26px; display:flex; justify-content:space-between;"><div style="width:26px; height:26px; border-radius:7px; background:var(--green-900);"></div><div style="width:26px; height:26px; border-radius:7px; background:#d8d2c2;"></div><div style="width:26px; height:26px; border-radius:7px; background:#d8d2c2;"></div><div style="width:26px; height:26px; border-radius:7px; background:#d8d2c2;"></div></div>
+      </div>
+    </div>
+    <div style="width:280px; height:580px; background:#10210f; border-radius:42px; padding:12px; box-shadow:0 30px 60px rgba(31,77,43,.28); transform:translateY(-20px);">
+      <div style="width:100%; height:100%; background:linear-gradient(170deg,#1b3f24,#142e1a); border-radius:32px; overflow:hidden; display:flex; flex-direction:column; padding:26px 22px;">
+        <div style="position:relative; height:6px;"><div style="position:absolute; top:-8px; left:50%; transform:translateX(-50%); width:90px; height:6px; background:rgba(255,255,255,.25); border-radius:4px;"></div></div>
+        <div style="font-family:var(--sans); font-weight:600; font-size:13px; letter-spacing:.2em; color:var(--honey); text-transform:uppercase; margin-top:14px;">Carte membre</div>
+        <div style="background:linear-gradient(135deg,#C9962E,#E8CE8E); border-radius:18px; padding:20px; margin-top:14px; color:#3a2c08;"><div style="display:flex; justify-content:space-between; align-items:center;"><span style="font-family:var(--serif); font-weight:600; font-size:20px;">VIP Gold</span><img src="assets/moringa-logo-transparent.png" alt="" style="height:28px;"></div><div style="font-family:var(--sans); font-weight:800; font-size:30px; margin-top:24px;">1 240 pts</div><div style="font-size:13px; font-weight:600;">Leïla Ben Salah</div></div>
+        <div style="font-family:var(--sans); font-weight:700; font-size:15px; color:var(--cream); margin-top:22px;">Vos récompenses</div>
+        <div style="display:flex; flex-direction:column; gap:10px; margin-top:12px;"><div style="background:rgba(255,255,255,.08); border-radius:12px; padding:12px 14px; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:14px; color:var(--cream);">Jus offert</span><span style="font-size:13px; font-weight:700; color:var(--honey-200);">500 pts</span></div><div style="background:rgba(255,255,255,.08); border-radius:12px; padding:12px 14px; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:14px; color:var(--cream);">Coffret -15%</span><span style="font-size:13px; font-weight:700; color:var(--honey-200);">1 000 pts</span></div></div>
+        <div style="margin-top:auto; background:var(--honey); color:#3a2c08; font-family:var(--sans); font-weight:700; font-size:15px; padding:13px; border-radius:100px; text-align:center;">Réserver un événement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-label="07 Marketing" data-screen-label="Divider 07" data-speaker-notes="Part seven: the marketing strategy." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative;">
+    <div style="font-family:var(--sans); font-weight:800; font-size:180px; color:var(--honey); line-height:1;">07</div>
+    <h2 style="font-size:88px; color:var(--cream); margin-top:8px;">Stratégie marketing</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:24px; max-width:820px; line-height:1.5;">Du lancement aux campagnes saisonnières, en passant par la fidélité et les programmes VIP.</p>
+  </div>
+</section>
+
+<section data-label="Campagnes &amp; programmes" data-screen-label="Marketing programs" data-speaker-notes="Launch campaign, seasonal/wedding/bac campaigns, loyalty, referral, VIP, influencers." style="height:100%; display:flex; flex-direction:column; padding:72px var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:12px;">07 · Marketing</div>
+  <h2 style="font-size:56px; color:var(--green-900); margin-bottom:34px;">Campagnes &amp; programmes</h2>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:1fr 1fr; gap:24px; flex:1;">
+    <div style="background:var(--green-900); border-radius:20px; padding:32px; display:flex; flex-direction:column; justify-content:space-between;"><div style="font-family:var(--sans); font-weight:600; font-size:15px; letter-spacing:.18em; color:var(--honey-200); text-transform:uppercase;">Lancement</div><div><div style="font-family:var(--sans); font-weight:800; font-size:26px; color:var(--cream);">« Goûte au naturel »</div><p style="font-size:17px; color:rgba(247,241,227,.8); margin-top:8px; line-height:1.4;">Teasing, dégustations en boutique, influenceurs wellness tunisiens.</p></div></div>
+    <div style="background:var(--paper); border-radius:20px; padding:32px; box-shadow:0 12px 30px rgba(31,77,43,.06); display:flex; flex-direction:column; justify-content:space-between;"><div style="font-family:var(--sans); font-weight:600; font-size:15px; letter-spacing:.18em; color:var(--honey); text-transform:uppercase;">Fidélité</div><div><div style="font-family:var(--sans); font-weight:800; font-size:26px; color:var(--green-900);">Cercle Moringa</div><p style="font-size:17px; color:var(--muted); margin-top:8px; line-height:1.4;">1 point / dinar · jus offert, coffrets en avant-première.</p></div></div>
+    <div style="background:var(--honey); border-radius:20px; padding:32px; display:flex; flex-direction:column; justify-content:space-between; color:#3a2c08;"><div style="font-family:var(--sans); font-weight:600; font-size:15px; letter-spacing:.18em; text-transform:uppercase;">Parrainage</div><div><div style="font-family:var(--sans); font-weight:800; font-size:26px;">Offre &amp; reçois</div><p style="font-size:17px; margin-top:8px; line-height:1.4;">-10% pour le parrain et le filleul à la première commande.</p></div></div>
+    <div style="background:var(--paper); border-radius:20px; padding:32px; box-shadow:0 12px 30px rgba(31,77,43,.06); display:flex; flex-direction:column; justify-content:space-between;"><div style="font-family:var(--sans); font-weight:600; font-size:15px; letter-spacing:.18em; color:var(--honey); text-transform:uppercase;">Saison · Mariages</div><div><div style="font-family:var(--sans); font-weight:800; font-size:26px; color:var(--green-900);">Coffrets d'honneur</div><p style="font-size:17px; color:var(--muted); margin-top:8px; line-height:1.4;">Packs invités sur-mesure pour mariages &amp; fiançailles.</p></div></div>
+    <div style="background:var(--paper); border-radius:20px; padding:32px; box-shadow:0 12px 30px rgba(31,77,43,.06); display:flex; flex-direction:column; justify-content:space-between;"><div style="font-family:var(--sans); font-weight:600; font-size:15px; letter-spacing:.18em; color:var(--honey); text-transform:uppercase;">Bac &amp; réussite</div><div><div style="font-family:var(--sans); font-weight:800; font-size:26px; color:var(--green-900);">« Bravo champion »</div><p style="font-size:17px; color:var(--muted); margin-top:8px; line-height:1.4;">Coffrets félicitations en juin-juillet, message personnalisé.</p></div></div>
+    <div style="background:linear-gradient(160deg,#1b3f24,#142e1a); border:2px solid var(--honey); border-radius:20px; padding:32px; display:flex; flex-direction:column; justify-content:space-between;"><div style="font-family:var(--sans); font-weight:600; font-size:15px; letter-spacing:.18em; color:var(--honey); text-transform:uppercase;">VIP</div><div><div style="font-family:var(--sans); font-weight:800; font-size:26px; color:var(--cream);">Cercle privé</div><p style="font-size:17px; color:rgba(247,241,227,.8); margin-top:8px; line-height:1.4;">Abonnement premium, accès prioritaire, conseiller dédié.</p></div></div>
+  </div>
+</section>
+
+<section data-label="08 Roadmap" data-screen-label="Divider 08" data-speaker-notes="Part eight: the growth roadmap." style="height:100%; display:flex; flex-direction:column; justify-content:center; padding:var(--pad-y) var(--pad-x); background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative;">
+    <div style="font-family:var(--sans); font-weight:800; font-size:180px; color:var(--honey); line-height:1;">08</div>
+    <h2 style="font-size:88px; color:var(--cream); margin-top:8px;">Roadmap de croissance</h2>
+    <p style="font-size:var(--type-body); color:rgba(247,241,227,.7); margin-top:24px; max-width:820px; line-height:1.5;">Du lancement de la boutique pilote à la marque de référence du bien-être en Tunisie.</p>
+  </div>
+</section>
+
+<section data-label="Plan de déploiement" data-screen-label="Roadmap" data-speaker-notes="Four phases: launch, awareness, expansion, leadership." style="height:100%; display:flex; flex-direction:column; padding:72px var(--pad-x); background:var(--cream-2);">
+  <div style="font-family:var(--sans); font-weight:600; font-size:var(--type-small); letter-spacing:0.3em; color:var(--honey); text-transform:uppercase; margin-bottom:12px;">08 · Roadmap</div>
+  <h2 style="font-size:56px; color:var(--green-900); margin-bottom:46px;">Plan de déploiement</h2>
+  <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:24px; flex:1;">
+    <div style="display:flex; flex-direction:column;"><div style="height:8px; background:var(--green-500); border-radius:4px;"></div><div style="font-family:var(--sans); font-weight:800; font-size:22px; color:var(--honey); margin-top:20px;">T3 2026</div><div style="font-family:var(--sans); font-weight:700; font-size:28px; color:var(--green-900); margin-top:4px;">Lancement</div><div style="background:var(--paper); border-radius:16px; padding:24px; margin-top:18px; flex:1; box-shadow:0 10px 26px rgba(31,77,43,.06); font-size:19px; color:var(--ink); line-height:1.5;">Boutique pilote à Tunis · gamme jus &amp; miel · site web + réservation en ligne.</div></div>
+    <div style="display:flex; flex-direction:column;"><div style="height:8px; background:var(--honey-200); border-radius:4px;"></div><div style="font-family:var(--sans); font-weight:800; font-size:22px; color:var(--honey); margin-top:20px;">T4 2026</div><div style="font-family:var(--sans); font-weight:700; font-size:28px; color:var(--green-900); margin-top:4px;">Notoriété</div><div style="background:var(--paper); border-radius:16px; padding:24px; margin-top:18px; flex:1; box-shadow:0 10px 26px rgba(31,77,43,.06); font-size:19px; color:var(--ink); line-height:1.5;">Réseaux sociaux &amp; influenceurs · programme fidélité · coffrets de fin d'année.</div></div>
+    <div style="display:flex; flex-direction:column;"><div style="height:8px; background:var(--honey); border-radius:4px;"></div><div style="font-family:var(--sans); font-weight:800; font-size:22px; color:var(--honey); margin-top:20px;">2027</div><div style="font-family:var(--sans); font-weight:700; font-size:28px; color:var(--green-900); margin-top:4px;">Expansion</div><div style="background:var(--paper); border-radius:16px; padding:24px; margin-top:18px; flex:1; box-shadow:0 10px 26px rgba(31,77,43,.06); font-size:19px; color:var(--ink); line-height:1.5;">2ᵉ boutique · app mobile · gammes détox, bsissa &amp; zrir · offre B2B événements.</div></div>
+    <div style="display:flex; flex-direction:column;"><div style="height:8px; background:var(--green-900); border-radius:4px;"></div><div style="font-family:var(--sans); font-weight:800; font-size:22px; color:var(--honey); margin-top:20px;">2028</div><div style="font-family:var(--sans); font-weight:700; font-size:28px; color:var(--green-900); margin-top:4px;">Référence</div><div style="background:linear-gradient(160deg,#23502d,#1b3f24); border-radius:16px; padding:24px; margin-top:18px; flex:1; box-shadow:0 10px 26px rgba(31,77,43,.14); font-size:19px; color:var(--cream); line-height:1.5;">Corners &amp; franchise · ligne VIP · e-commerce national · premiers exports.</div></div>
+  </div>
+</section>
+
+<section data-label="Merci" data-screen-label="Closing" data-speaker-notes="Closing — the promise: natural, healthy, delicious." style="height:100%; display:flex; align-items:center; background:var(--green-900); position:relative;">
+  <div style="position:absolute; inset:0; background-image:linear-gradient(45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%),linear-gradient(-45deg,transparent 48%,rgba(255,255,255,.04) 49%,rgba(255,255,255,.04) 51%,transparent 52%); background-size:54px 54px;"></div>
+  <div style="position:relative; flex:1; padding:var(--pad-y) var(--pad-x);">
+    <img src="assets/moringa-logo-cream.png" alt="" style="height:150px; margin-bottom:30px;">
+    <div style="font-family:var(--ar); direction:rtl; font-size:72px; color:var(--cream); font-weight:700;">طبيعي، صحي، وبنين</div>
+    <div style="font-family:var(--serif); font-style:italic; font-size:40px; color:var(--honey-200); margin-top:8px;">Naturel, sain et délicieux.</div>
+    <div style="height:2px; width:160px; background:var(--honey); margin:40px 0;"></div>
+    <div style="display:flex; gap:50px; font-size:24px; color:rgba(247,241,227,.8);"><span>moringa.tn</span><span>@moringa.tn</span><span>+216 00 000 000</span></div>
+  </div>
+</section>
+</x-import>
+</x-dc>
+</body>
+</html>
