@@ -42,10 +42,12 @@
   .row::-webkit-scrollbar{height:8px;}
   .row::-webkit-scrollbar-thumb{background:rgba(14,94,62,.22); border-radius:8px;}
   .row::-webkit-scrollbar-track{background:transparent;}
-  .hero-grid{display:grid; grid-template-columns:minmax(240px,30%) 1fr; gap:44px; align-items:center;}
+  .hero-grid{display:grid; grid-template-columns:1fr auto; gap:44px; align-items:center;}
+  .hero-video-col{height:440px; aspect-ratio:var(--video-ar,4/3); position:relative; z-index:2; display:flex; justify-content:center; align-items:flex-end;}
   @media (max-width:860px){
     .hero-grid{grid-template-columns:1fr; gap:28px;}
     .hero-arc{height:320px !important;}
+    .hero-video-col{height:320px !important; aspect-ratio:unset !important; width:100%;}
     .hero-copy{text-align:center; align-items:center !important;}
     .hero-copy .hero-cta{justify-content:center;}
   }
@@ -74,7 +76,7 @@
 
   <a id="top"></a>
   <section style="padding:26px 40px 14px; max-width:1320px; margin:0 auto;">
-    <div class="hero-grid" style="background:radial-gradient(120% 120% at 80% 0%, #16A98E 0%, #0E5E3E 60%); border-radius:30px; padding:48px 52px; position:relative; overflow:hidden;">
+    <div class="hero-grid" style="background:radial-gradient(120% 120% at 80% 0%, #16A98E 0%, #0E5E3E 60%); border-radius:30px; padding:48px 52px; position:relative; overflow:hidden; --video-ar:{{ heroVideoAr }};">
       <div style="position:absolute; top:30px; left:30px; right:30px; bottom:30px; border:1.5px solid rgba(255,255,255,.14); border-radius:200px 200px 22px 22px; pointer-events:none;"></div>
       <div style="position:absolute; top:-50px; right:8%; width:130px; height:130px; border-radius:50%; background:var(--mango); opacity:.95;"></div>
       <div class="hero-copy" style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:flex-start; justify-content:center;">
@@ -86,8 +88,8 @@
           <a href="#coffrets" style="background:rgba(255,255,255,.12); border:1.5px solid rgba(255,255,255,.5); color:#fff; font-family:var(--sans); font-weight:800; font-size:15px; padding:12px 24px; border-radius:100px;">Coffrets</a>
         </div>
       </div>
-      <div style="position:relative; z-index:2; display:flex; justify-content:center; align-items:flex-end;">
-        <div style="position:relative; width:100%;">
+      <div class="hero-video-col">
+        <div style="position:relative; width:100%; height:100%;">
           <div style="position:absolute; top:-26px; left:50%; transform:translateX(-50%); display:flex; align-items:flex-end; gap:4px; z-index:3;">
             <div style="width:16px; height:46px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%; transform:rotate(-38deg);"></div>
             <div style="width:18px; height:58px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%; transform:rotate(-16deg);"></div>
@@ -95,7 +97,12 @@
             <div style="width:18px; height:58px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%; transform:rotate(16deg);"></div>
             <div style="width:16px; height:46px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%; transform:rotate(38deg);"></div>
           </div>
-          <div class="hero-arc" style="width:100%; height:440px; border-radius:200px 200px 22px 22px; overflow:hidden; border:7px solid #fff; box-shadow:0 26px 50px rgba(0,0,0,.3); background:linear-gradient(160deg,#1ec7a8,#0E5E3E);"><image-slot id="facade-externe" shape="rect" fit="cover" placeholder="Photo façade externe" style="width:100%; height:100%;"></image-slot>
+          <div class="hero-arc" style="width:100%; height:100%; border-radius:200px 200px 22px 22px; overflow:hidden; border:7px solid #fff; box-shadow:0 26px 50px rgba(0,0,0,.3); background:linear-gradient(160deg,#1ec7a8,#0E5E3E);">
+            <sc-if value="{{ hasHeroVideo }}" hint-placeholder-val="{{ false }}">
+              <sc-if value="{{ heroVideoIsVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ heroVideoUrl }}" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video></sc-if>
+              <sc-if value="{{ heroVideoIsImage }}" hint-placeholder-val="{{ true }}"><img src="{{ heroVideoUrl }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if>
+            </sc-if>
+            <sc-if value="{{ noHeroVideo }}" hint-placeholder-val="{{ true }}"><image-slot id="facade-externe" shape="rect" fit="cover" placeholder="Photo façade externe" style="width:100%; height:100%;"></image-slot></sc-if>
           </div>
         </div>
       </div>
@@ -374,6 +381,7 @@
         <button data-tab="orders" onClick="{{ setAdminTab }}" style="{{ tabStyleOrders }}">Commandes</button>
         <button data-tab="products" onClick="{{ setAdminTab }}" style="{{ tabStyleProducts }}">Produits</button>
         <button data-tab="sections" onClick="{{ setAdminTab }}" style="{{ tabStyleSections }}">Sections</button>
+        <button data-tab="vitrine" onClick="{{ setAdminTab }}" style="{{ tabStyleVitrine }}">Vitrine</button>
       </div>
 
       <sc-if value="{{ tabIsOrders }}" hint-placeholder-val="{{ true }}">
@@ -475,6 +483,41 @@
           </div>
         </div>
       </sc-if>
+
+      <sc-if value="{{ tabIsVitrine }}" hint-placeholder-val="{{ false }}">
+        <div class="adm-list" style="flex:1; overflow-y:auto; padding:18px 26px 26px;">
+          <div style="max-width:580px;">
+            <div style="font-family:var(--sans); font-weight:900; font-size:17px; color:var(--jungle); margin-bottom:4px;">Vidéo / image d'accueil</div>
+            <div style="font-size:13px; color:var(--muted); margin-bottom:22px;">Le format choisi détermine la largeur de la zone vidéo. Les colonnes de produits récupèrent l'espace libéré automatiquement.</div>
+
+            <div style="margin-bottom:22px;">
+              <div style="font-family:var(--sans); font-weight:700; font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:10px;">Format d'affichage</div>
+              <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <sc-for list="{{ heroFmtBtns }}" as="fb" hint-placeholder-count="5">
+                  <button data-fmt="{{ fb.key }}" onClick="{{ setVideoFormat }}" style="{{ fb.style }}">{{ fb.label }}</button>
+                </sc-for>
+              </div>
+              <div style="font-size:12px; color:var(--muted); margin-top:9px; line-height:1.5;">{{ heroFmtHint }}</div>
+            </div>
+
+            <sc-if value="{{ hasHeroVideo }}" hint-placeholder-val="{{ false }}">
+              <div style="margin-bottom:18px; display:inline-block; border-radius:16px; overflow:hidden; background:#f0e7d4; border:1px solid #e4d8bd;">
+                <sc-if value="{{ heroVideoIsVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ heroVideoUrl }}" controls muted style="max-width:280px; max-height:260px; display:block;"></video></sc-if>
+                <sc-if value="{{ heroVideoIsImage }}" hint-placeholder-val="{{ true }}"><img src="{{ heroVideoUrl }}" alt="" style="max-width:280px; max-height:260px; object-fit:cover; display:block;"></sc-if>
+              </div>
+            </sc-if>
+
+            <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+              <label style="border:1.5px dashed var(--green); color:var(--green); font-family:var(--sans); font-weight:700; font-size:13px; padding:10px 20px; border-radius:100px; cursor:pointer; display:inline-block;">
+                {{ uploadVideoLabel }}<input type="file" accept="video/*,image/*" onChange="{{ onHomeVideoFile }}" style="display:none;">
+              </label>
+              <sc-if value="{{ hasHeroVideo }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ removeHomeVideo }}" style="border:none; background:none; cursor:pointer; color:var(--coral); font-family:var(--sans); font-weight:700; font-size:13px;">Retirer</button>
+              </sc-if>
+            </div>
+          </div>
+        </div>
+      </sc-if>
     </div>
   </sc-if>
 
@@ -570,6 +613,8 @@ class Component extends DCLogic {
     sizePicker: null,
     products: [], sections: [], adminTab: 'orders',
     productEditor: null, prodBusy: false, prodErr: '', importBusy: false, uploadBusy: false,
+    homeVideo: { url: null, mediaType: null, format: '4-3' },
+    uploadVideoBusy: false,
   };
   form = { name: '', phone: '', address: '', notes: '', admEmail: '', admPass: '' };
   OCCASIONS = [
@@ -651,6 +696,12 @@ class Component extends DCLogic {
       this._productsFirst = true;
       this.setState({ products }, () => this.maybeAutoSeed());
     }, (e) => console.error('products listen', e));
+    this.db.collection('settings').doc('home').onSnapshot((snap) => {
+      if (snap.exists) {
+        const data = snap.data();
+        if (data && data.homeVideo) this.setState({ homeVideo: data.homeVideo });
+      }
+    }, (e) => console.error('settings listen', e));
   }
 
   // First visitor ever to load an empty catalog seeds it automatically —
@@ -853,6 +904,47 @@ class Component extends DCLogic {
     const { id, status } = e.currentTarget.dataset;
     if (this.db) this.db.collection('orders').doc(id).update({ status });
   };
+
+  // ---------------- Admin: home video ----------------
+  setVideoFormat = (e) => {
+    const fmt = e.currentTarget.dataset.fmt;
+    this.setState(s => {
+      const hv = { ...(s.homeVideo || {}), format: fmt };
+      this._saveHomeVideo(hv);
+      return { homeVideo: hv };
+    });
+  };
+  onHomeVideoFile = async (e) => {
+    const file = e.currentTarget.files && e.currentTarget.files[0];
+    if (!file || !this.storage) return;
+    this.setState({ uploadVideoBusy: true });
+    try {
+      const ref = this.storage.ref('home/hero_' + Date.now() + '_' + file.name.replace(/[^a-zA-Z0-9._-]/g, '_').slice(-30));
+      await ref.put(file);
+      const url = await ref.getDownloadURL();
+      const mediaType = file.type.startsWith('video') ? 'video' : 'image';
+      this.setState(s => {
+        const hv = { ...(s.homeVideo || {}), url, mediaType };
+        this._saveHomeVideo(hv);
+        return { homeVideo: hv, uploadVideoBusy: false };
+      });
+    } catch (err) {
+      console.error('hero video upload', err);
+      this.setState({ uploadVideoBusy: false });
+    }
+  };
+  removeHomeVideo = () => {
+    this.setState(s => {
+      const hv = { ...(s.homeVideo || {}), url: null, mediaType: null };
+      this._saveHomeVideo(hv);
+      return { homeVideo: hv };
+    });
+  };
+  _saveHomeVideo(hv) {
+    if (!this.db) return;
+    this.db.collection('settings').doc('home').set({ homeVideo: hv }, { merge: true })
+      .catch(e => console.error('save home video', e));
+  }
 
   // ---------------- Admin: catalog import ----------------
   importSeed = async () => {
@@ -1260,6 +1352,32 @@ class Component extends DCLogic {
       });
     }
 
+    // ---- Home video ----
+    const RATIO_CSS = { 'reel': '9/16', '1-1': '1/1', '3-4': '3/4', '4-3': '4/3', '16-9': '16/9' };
+    const RATIO_HINTS = {
+      'reel':  'Vidéo verticale type Reels/TikTok. Zone produits très large — jusqu\'à 5 colonnes.',
+      '1-1':   'Format carré. Zone produits large — 3–4 colonnes.',
+      '3-4':   'Portrait. Zone produits large — 3–4 colonnes.',
+      '4-3':   'Paysage standard. 2–3 colonnes de produits.',
+      '16-9':  'Très large. La vidéo occupe plus de la moitié de la bannière — 2 colonnes de produits.',
+    };
+    const hv = S.homeVideo || {};
+    const heroFmt = hv.format || '4-3';
+    const heroVideoAr = RATIO_CSS[heroFmt] || '4/3';
+    const heroVideoUrl = hv.url || null;
+    const heroVideoIsVideo = hv.mediaType === 'video';
+    const hasHeroVideo = !!heroVideoUrl;
+    const heroFmtBtns = [
+      { key: 'reel',  label: 'Reel  9:16' },
+      { key: '1-1',  label: 'Carré  1:1' },
+      { key: '3-4',  label: 'Portrait  3:4' },
+      { key: '4-3',  label: 'Paysage  4:3' },
+      { key: '16-9', label: 'Large  16:9' },
+    ].map(f => ({
+      key: f.key, label: f.label,
+      style: 'border:none; cursor:pointer; font-family:var(--sans); font-weight:700; font-size:12.5px; padding:9px 15px; border-radius:100px; white-space:nowrap; ' + (heroFmt === f.key ? 'background:var(--jungle); color:#fff;' : 'background:#f0e7d4; color:var(--jungle);'),
+    }));
+
     // ---- Admin: tabs ----
     const tabBtnStyle = (active) => 'border:none; cursor:pointer; background:' + (active ? 'var(--paper)' : '#e4d8bd') + '; color:' + (active ? 'var(--jungle)' : 'var(--muted)') + '; font-family:var(--sans); font-weight:800; font-size:13.5px; padding:9px 18px; border-radius:10px 10px 0 0;';
 
@@ -1371,9 +1489,18 @@ class Component extends DCLogic {
       statPending: String(pending), statTotal: String(orders.length),
       toggleSound: this.toggleSound, soundIcon: S.soundOn ? '🔔' : '🔕',
 
+      heroVideoAr, heroVideoUrl: heroVideoUrl || '', hasHeroVideo,
+      noHeroVideo: !hasHeroVideo,
+      heroVideoIsVideo, heroVideoIsImage: hasHeroVideo && !heroVideoIsVideo,
+
       setAdminTab: this.setAdminTab,
-      tabIsOrders: S.adminTab === 'orders', tabIsProducts: S.adminTab === 'products', tabIsSections: S.adminTab === 'sections',
-      tabStyleOrders: tabBtnStyle(S.adminTab === 'orders'), tabStyleProducts: tabBtnStyle(S.adminTab === 'products'), tabStyleSections: tabBtnStyle(S.adminTab === 'sections'),
+      tabIsOrders: S.adminTab === 'orders', tabIsProducts: S.adminTab === 'products',
+      tabIsSections: S.adminTab === 'sections', tabIsVitrine: S.adminTab === 'vitrine',
+      tabStyleOrders: tabBtnStyle(S.adminTab === 'orders'), tabStyleProducts: tabBtnStyle(S.adminTab === 'products'),
+      tabStyleSections: tabBtnStyle(S.adminTab === 'sections'), tabStyleVitrine: tabBtnStyle(S.adminTab === 'vitrine'),
+      heroFmtBtns, heroFmtHint: RATIO_HINTS[heroFmt] || '',
+      setVideoFormat: this.setVideoFormat, onHomeVideoFile: this.onHomeVideoFile, removeHomeVideo: this.removeHomeVideo,
+      uploadVideoLabel: S.uploadVideoBusy ? 'Envoi en cours…' : (hasHeroVideo ? 'Changer le média' : 'Choisir une vidéo / image'),
 
       openNewProduct: this.openNewProduct, openEditProduct: this.openEditProduct,
       deleteProduct: this.deleteProduct, toggleHidden: this.toggleHidden, moveProduct: this.moveProduct,
