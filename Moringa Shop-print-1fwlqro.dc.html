@@ -40,6 +40,7 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
 <style>
   @keyframes mspin{to{transform:rotate(360deg);}}
   @keyframes mpop{0%{transform:scale(.92); opacity:0;}100%{transform:scale(1); opacity:1;}}
@@ -65,6 +66,12 @@
   .row::-webkit-scrollbar{height:8px;}
   .row::-webkit-scrollbar-thumb{background:rgba(14,94,62,.22); border-radius:8px;}
   .row::-webkit-scrollbar-track{background:transparent;}
+  .vitrine-grid{display:grid; grid-template-columns:1fr auto; gap:28px; align-items:start;}
+  .vitrine-video-col{aspect-ratio:var(--vitrine-ar,4/3); height:380px; border-radius:20px; overflow:hidden; border:5px solid #fff; box-shadow:0 20px 44px rgba(0,0,0,.22); background:linear-gradient(160deg,#1ec7a8,#0E5E3E);}
+  @media (max-width:900px){
+    .vitrine-grid{grid-template-columns:1fr; gap:20px;}
+    .vitrine-video-col{height:240px !important; aspect-ratio:unset !important; width:100%;}
+  }
 </style>
 </helmet>
 <div style="font-family:var(--body); color:var(--ink); background:var(--cream); min-height:100vh;">
@@ -92,32 +99,47 @@
   </nav>
 
   <a id="top"></a>
-  <section style="padding:26px 40px 14px; max-width:1320px; margin:0 auto;">
-    <div style="display:grid; grid-template-columns:1.1fr .9fr; gap:34px; align-items:center; background:radial-gradient(120% 120% at 80% 0%, #16A98E 0%, #0E5E3E 60%); border-radius:30px; padding:48px 52px; position:relative; overflow:hidden;">
-      <div style="position:absolute; top:30px; left:30px; right:30px; bottom:30px; border:1.5px solid rgba(255,255,255,.14); border-radius:200px 200px 22px 22px; pointer-events:none;"></div>
-      <div style="position:absolute; top:-50px; right:8%; width:130px; height:130px; border-radius:50%; background:var(--mango); opacity:.95;"></div>
-      <div style="position:relative; z-index:2;">
-        <div style="display:inline-block; background:rgba(255,255,255,.16); color:#fff; font-family:var(--sans); font-weight:800; font-size:12px; letter-spacing:.14em; padding:6px 14px; border-radius:100px;">L'OASIS DU NATUREL · TUNIS</div>
-        <h1 style="font-size:54px; color:#fff; margin-top:16px; line-height:1.02;">Entrez dans<br>le <span style="color:var(--mango);">verger</span> Moringa</h1>
-        <p style="font-size:16px; color:rgba(255,255,255,.88); margin-top:14px; max-width:380px; line-height:1.5;">Jus pressés, fruits gorgés de soleil et fruits secs gourmands — une parenthèse tropicale, livrée fraîche.</p>
-        <div style="display:flex; gap:10px; margin-top:22px;">
-          <a href="#jus" style="background:var(--mango); color:#3a2c08; font-family:var(--sans); font-weight:800; font-size:15px; padding:11px 24px; border-radius:100px;">Explorer la boutique</a>
-          <a href="#coffrets" style="background:rgba(255,255,255,.14); border:1.5px solid rgba(255,255,255,.5); color:#fff; font-family:var(--sans); font-weight:800; font-size:15px; padding:10px 22px; border-radius:100px;">Coffrets</a>
+  <section style="padding:26px 40px 10px; max-width:1320px; margin:0 auto;">
+    <div style="background:var(--paper); border:2px solid #e4d8bd; border-radius:28px; overflow:hidden; box-shadow:0 12px 40px rgba(14,94,62,.08);">
+      <!-- Awning stripes -->
+      <div style="height:26px; background:repeating-linear-gradient(90deg, var(--jungle) 0 36px, #fff 36px 72px); border-bottom:3px solid var(--jungle);"></div>
+      <!-- Badge -->
+      <div style="text-align:center; padding:18px 0 0;">
+        <span style="display:inline-flex; align-items:center; gap:8px; background:var(--mango); color:#3a2c08; font-family:var(--sans); font-weight:800; font-size:14px; letter-spacing:.06em; padding:7px 20px; border-radius:100px;">Moringa · Jus &amp; Fruits</span>
+      </div>
+      <!-- Feature cards + video -->
+      <div class="vitrine-grid" style="padding:20px 36px 20px; --vitrine-ar:{{ vitrineAr }};">
+        <!-- Left: 2×2 feature cards -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <div style="background:var(--cream); border-radius:16px; padding:12px; border:1px solid #ece1c8;">
+            <div style="height:120px; border-radius:12px; overflow:hidden; background:linear-gradient(160deg,#FFE2A8,#FF9A3D); position:relative;"><image-slot id="feat-orange" shape="rect" fit="cover" placeholder="Photo" style="width:100%; height:100%;"></image-slot><span style="position:absolute; top:8px; left:8px; background:#fff; color:var(--jungle); font-family:var(--sans); font-weight:800; font-size:11px; padding:3px 9px; border-radius:100px;">Dès 7 DT</span></div>
+            <div style="font-family:var(--sans); font-weight:800; font-size:14px; color:var(--jungle); margin-top:10px;">Jus Classiques</div>
+          </div>
+          <div style="background:var(--cream); border-radius:16px; padding:12px; border:1px solid #ece1c8;">
+            <div style="height:120px; border-radius:12px; overflow:hidden; background:linear-gradient(160deg,#CFEFA6,#3FB24C); position:relative;"><image-slot id="feat-detox" shape="rect" fit="cover" placeholder="Photo" style="width:100%; height:100%;"></image-slot><span style="position:absolute; top:8px; left:8px; background:#fff; color:var(--jungle); font-family:var(--sans); font-weight:800; font-size:11px; padding:3px 9px; border-radius:100px;">Dès 9 DT</span></div>
+            <div style="font-family:var(--sans); font-weight:800; font-size:14px; color:var(--jungle); margin-top:10px;">Jus Détox</div>
+          </div>
+          <div style="background:var(--cream); border-radius:16px; padding:12px; border:1px solid #ece1c8;">
+            <div style="height:120px; border-radius:12px; overflow:hidden; background:linear-gradient(160deg,#FFE08A,#FFB02E); position:relative;"><image-slot id="feat-smoothie" shape="rect" fit="cover" placeholder="Photo" style="width:100%; height:100%;"></image-slot><span style="position:absolute; top:8px; left:8px; background:#fff; color:var(--jungle); font-family:var(--sans); font-weight:800; font-size:11px; padding:3px 9px; border-radius:100px;">Dès 9 DT</span></div>
+            <div style="font-family:var(--sans); font-weight:800; font-size:14px; color:var(--jungle); margin-top:10px;">Smoothies</div>
+          </div>
+          <div style="background:var(--cream); border-radius:16px; padding:12px; border:1px solid #ece1c8;">
+            <div style="height:120px; border-radius:12px; overflow:hidden; background:linear-gradient(160deg,#D8B98F,#7A4A1E); position:relative;"><image-slot id="feat-coffret" shape="rect" fit="cover" placeholder="Photo" style="width:100%; height:100%;"></image-slot><span style="position:absolute; top:8px; left:8px; background:#fff; color:var(--jungle); font-family:var(--sans); font-weight:800; font-size:11px; padding:3px 9px; border-radius:100px;">Dès 35 DT</span></div>
+            <div style="font-family:var(--sans); font-weight:800; font-size:14px; color:var(--jungle); margin-top:10px;">Coffrets</div>
+          </div>
+        </div>
+        <!-- Right: video -->
+        <div class="vitrine-video-col">
+          <sc-if value="{{ hasVitrineVideo }}" hint-placeholder-val="{{ false }}">
+            <sc-if value="{{ vitrineVideoIsVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ vitrineVideoUrl }}" autoplay loop muted playsinline style="width:100%; height:100%; object-fit:cover; display:block;"></video></sc-if>
+            <sc-if value="{{ vitrineVideoIsImage }}" hint-placeholder-val="{{ true }}"><img src="{{ vitrineVideoUrl }}" alt="" style="width:100%; height:100%; object-fit:cover; display:block;"></sc-if>
+          </sc-if>
+          <sc-if value="{{ noVitrineVideo }}" hint-placeholder-val="{{ true }}"><image-slot id="vitrine-media" shape="rect" fit="cover" placeholder="Vidéo / photo vitrine" style="width:100%; height:100%;"></image-slot></sc-if>
         </div>
       </div>
-      <div style="position:relative; z-index:2; display:flex; justify-content:center;">
-        <div style="position:relative; width:330px;">
-          <div style="position:absolute; top:-26px; left:50%; transform:translateX(-50%); display:flex; align-items:flex-end; gap:4px; z-index:3;">
-            <div style="width:16px; height:46px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%; transform:rotate(-38deg);"></div>
-            <div style="width:18px; height:58px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%; transform:rotate(-16deg);"></div>
-            <div style="width:18px; height:64px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%;"></div>
-            <div style="width:18px; height:58px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%; transform:rotate(16deg);"></div>
-            <div style="width:16px; height:46px; background:linear-gradient(var(--leaf),var(--green)); border-radius:0 100% 0 100%; transform:rotate(38deg);"></div>
-          </div>
-          <div style="height:380px; border-radius:165px 165px 20px 20px; overflow:hidden; border:7px solid #fff; box-shadow:0 26px 50px rgba(0,0,0,.3); background:linear-gradient(160deg,#1ec7a8,#0E5E3E);"><image-slot id="facade-externe" shape="rect" fit="cover" placeholder="Photo façade externe" style="width:100%; height:100%;"></image-slot>
-            
-          </div>
-        </div>
+      <!-- CTA -->
+      <div style="text-align:center; padding:0 36px 28px;">
+        <a href="#classiques" style="display:inline-flex; align-items:center; gap:10px; background:var(--mango); color:#3a2c08; font-family:var(--sans); font-weight:800; font-size:16px; padding:14px 32px; border-radius:100px; box-shadow:0 10px 24px rgba(0,0,0,.14);">Entrer dans la boutique <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </section>
@@ -345,45 +367,79 @@
         </div>
       </div>
 
-      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:14px; padding:18px 26px 6px; flex-shrink:0;">
-        <div style="background:#fff; border:1px solid #ece1c8; border-radius:16px; padding:15px 18px;"><div style="font-size:12px; color:var(--muted); font-weight:600;">Commandes du jour</div><div style="font-family:var(--sans); font-weight:900; font-size:28px; color:var(--jungle); margin-top:3px;">{{ statToday }}</div></div>
-        <div style="background:#fff; border:1px solid #ece1c8; border-radius:16px; padding:15px 18px;"><div style="font-size:12px; color:var(--muted); font-weight:600;">Revenu du jour</div><div style="font-family:var(--sans); font-weight:900; font-size:28px; color:var(--green); margin-top:3px;">{{ statRevenue }}</div></div>
-        <div style="background:#fff; border:1px solid #ece1c8; border-radius:16px; padding:15px 18px;"><div style="font-size:12px; color:var(--muted); font-weight:600;">En attente</div><div style="font-family:var(--sans); font-weight:900; font-size:28px; color:var(--coral); margin-top:3px;">{{ statPending }}</div></div>
-        <div style="background:#fff; border:1px solid #ece1c8; border-radius:16px; padding:15px 18px;"><div style="font-size:12px; color:var(--muted); font-weight:600;">Total commandes</div><div style="font-family:var(--sans); font-weight:900; font-size:28px; color:var(--ink); margin-top:3px;">{{ statTotal }}</div></div>
+      <div style=”display:grid; grid-template-columns:repeat(4,1fr); gap:14px; padding:18px 26px 6px; flex-shrink:0;”>
+        <div style=”background:#fff; border:1px solid #ece1c8; border-radius:16px; padding:15px 18px;”><div style=”font-size:12px; color:var(--muted); font-weight:600;”>Commandes du jour</div><div style=”font-family:var(--sans); font-weight:900; font-size:28px; color:var(--jungle); margin-top:3px;”>{{ statToday }}</div></div>
+        <div style=”background:#fff; border:1px solid #ece1c8; border-radius:16px; padding:15px 18px;”><div style=”font-size:12px; color:var(--muted); font-weight:600;”>Revenu du jour</div><div style=”font-family:var(--sans); font-weight:900; font-size:28px; color:var(--green); margin-top:3px;”>{{ statRevenue }}</div></div>
+        <div style=”background:#fff; border:1px solid #ece1c8; border-radius:16px; padding:15px 18px;”><div style=”font-size:12px; color:var(--muted); font-weight:600;”>En attente</div><div style=”font-family:var(--sans); font-weight:900; font-size:28px; color:var(--coral); margin-top:3px;”>{{ statPending }}</div></div>
+        <div style=”background:#fff; border:1px solid #ece1c8; border-radius:16px; padding:15px 18px;”><div style=”font-size:12px; color:var(--muted); font-weight:600;”>Total commandes</div><div style=”font-family:var(--sans); font-weight:900; font-size:28px; color:var(--ink); margin-top:3px;”>{{ statTotal }}</div></div>
       </div>
 
-      <div class="adm-list" style="flex:1; overflow-y:auto; padding:12px 26px 26px;">
-        <sc-if value="{{ noOrders }}" hint-placeholder-val="{{ false }}"><div style="text-align:center; padding:80px 20px; color:var(--muted);"><div style="font-family:var(--sans); font-weight:800; font-size:18px; color:var(--jungle);">Aucune commande pour l'instant</div><div style="font-size:14px; margin-top:6px;">Les nouvelles réservations apparaîtront ici en temps réel.</div></div></sc-if>
-        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:14px;">
-          <sc-for list="{{ adminOrders }}" as="o" hint-placeholder-count="0">
-            <div style="{{ o.cardStyle }}">
-              <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:10px;">
-                <div>
-                  <div style="font-family:var(--sans); font-weight:900; font-size:16px; color:var(--jungle);">{{ o.no }}</div>
-                  <div style="font-size:12px; color:var(--muted); margin-top:1px;">{{ o.createdLabel }}</div>
-                </div>
-                <div style="{{ o.badgeStyle }}">{{ o.statusLabel }}</div>
-              </div>
-              <div style="background:#FBF7EC; border-radius:12px; padding:11px 13px; font-size:13px; line-height:1.6;">
-                <div style="display:flex; align-items:center; gap:7px;"><span style="font-weight:800; color:var(--jungle);">{{ o.customerName }}</span></div>
-                <div style="color:var(--muted);">📞 {{ o.phone }}</div>
-                <div style="color:var(--muted);">📍 {{ o.address }}</div>
-                <div style="color:var(--jungle); font-weight:700; margin-top:4px;">🗓 {{ o.whenLabel }} · {{ o.occasion }}</div>
-                <sc-if value="{{ o.hasNotes }}" hint-placeholder-val="{{ false }}"><div style="color:var(--muted); font-style:italic; margin-top:2px;">“{{ o.notes }}”</div></sc-if>
-              </div>
-              <div style="margin-top:9px; font-size:12.5px; color:var(--muted); line-height:1.55;">{{ o.itemsLabel }}</div>
-              <div style="display:flex; align-items:center; justify-content:space-between; margin-top:9px; padding-top:9px; border-top:1px dashed #e4d8bd;">
-                <span style="font-family:var(--sans); font-weight:900; font-size:18px; color:var(--jungle);">{{ o.totalLabel }}</span>
-                <div style="display:flex; gap:5px;">
-                  <button data-id="{{ o.id }}" data-status="new" onClick="{{ setStatus }}" style="{{ o.btnNew }}">Nouveau</button>
-                  <button data-id="{{ o.id }}" data-status="preparing" onClick="{{ setStatus }}" style="{{ o.btnPrep }}">Préparation</button>
-                  <button data-id="{{ o.id }}" data-status="delivered" onClick="{{ setStatus }}" style="{{ o.btnDone }}">Livré</button>
-                </div>
-              </div>
-            </div>
-          </sc-for>
-        </div>
+      <!-- Tab nav -->
+      <div style=”display:flex; gap:0; padding:0 26px 0; flex-shrink:0; border-bottom:1px solid #ece1c8;”>
+        <button data-tab=”orders” onClick=”{{ setAdminTab }}” style=”{{ tabStyleOrders }}”>Commandes</button>
+        <button data-tab=”vitrine” onClick=”{{ setAdminTab }}” style=”{{ tabStyleVitrine }}”>Vitrine</button>
       </div>
+
+      <!-- Orders tab -->
+      <sc-if value=”{{ tabIsOrders }}” hint-placeholder-val=”{{ true }}”>
+        <div class=”adm-list” style=”flex:1; overflow-y:auto; padding:12px 26px 26px;”>
+          <sc-if value=”{{ noOrders }}” hint-placeholder-val=”{{ false }}”><div style=”text-align:center; padding:80px 20px; color:var(--muted);”><div style=”font-family:var(--sans); font-weight:800; font-size:18px; color:var(--jungle);”>Aucune commande pour l'instant</div><div style=”font-size:14px; margin-top:6px;”>Les nouvelles réservations apparaîtront ici en temps réel.</div></div></sc-if>
+          <div style=”display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:14px;”>
+            <sc-for list=”{{ adminOrders }}” as=”o” hint-placeholder-count=”0”>
+              <div style=”{{ o.cardStyle }}”>
+                <div style=”display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:10px;”>
+                  <div>
+                    <div style=”font-family:var(--sans); font-weight:900; font-size:16px; color:var(--jungle);”>{{ o.no }}</div>
+                    <div style=”font-size:12px; color:var(--muted); margin-top:1px;”>{{ o.createdLabel }}</div>
+                  </div>
+                  <div style=”{{ o.badgeStyle }}”>{{ o.statusLabel }}</div>
+                </div>
+                <div style=”background:#FBF7EC; border-radius:12px; padding:11px 13px; font-size:13px; line-height:1.6;”>
+                  <div style=”display:flex; align-items:center; gap:7px;”><span style=”font-weight:800; color:var(--jungle);”>{{ o.customerName }}</span></div>
+                  <div style=”color:var(--muted);”>📞 {{ o.phone }}</div>
+                  <div style=”color:var(--muted);”>📍 {{ o.address }}</div>
+                  <div style=”color:var(--jungle); font-weight:700; margin-top:4px;”>🗓 {{ o.whenLabel }} · {{ o.occasion }}</div>
+                  <sc-if value=”{{ o.hasNotes }}” hint-placeholder-val=”{{ false }}”><div style=”color:var(--muted); font-style:italic; margin-top:2px;”>”{{ o.notes }}”</div></sc-if>
+                </div>
+                <div style=”margin-top:9px; font-size:12.5px; color:var(--muted); line-height:1.55;”>{{ o.itemsLabel }}</div>
+                <div style=”display:flex; align-items:center; justify-content:space-between; margin-top:9px; padding-top:9px; border-top:1px dashed #e4d8bd;”>
+                  <span style=”font-family:var(--sans); font-weight:900; font-size:18px; color:var(--jungle);”>{{ o.totalLabel }}</span>
+                  <div style=”display:flex; gap:5px;”>
+                    <button data-id=”{{ o.id }}” data-status=”new” onClick=”{{ setStatus }}” style=”{{ o.btnNew }}”>Nouveau</button>
+                    <button data-id=”{{ o.id }}” data-status=”preparing” onClick=”{{ setStatus }}” style=”{{ o.btnPrep }}”>Préparation</button>
+                    <button data-id=”{{ o.id }}” data-status=”delivered” onClick=”{{ setStatus }}” style=”{{ o.btnDone }}”>Livré</button>
+                  </div>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+
+      <!-- Vitrine tab -->
+      <sc-if value=”{{ tabIsVitrine }}” hint-placeholder-val=”{{ false }}”>
+        <div class=”adm-list” style=”flex:1; overflow-y:auto; padding:18px 26px 26px;”>
+          <div style=”max-width:580px;”>
+            <div style=”font-family:var(--sans); font-weight:800; font-size:16px; color:var(--jungle); margin-bottom:14px;”>Format de la vidéo vitrine</div>
+            <div style=”display:flex; gap:8px; flex-wrap:wrap;”>
+              <sc-for list=”{{ vitrineFmtBtns }}” as=”fb” hint-placeholder-count=”5”>
+                <button data-fmt=”{{ fb.key }}” onClick=”{{ setVitrineFormat }}” style=”{{ fb.style }}”>{{ fb.label }}</button>
+              </sc-for>
+            </div>
+            <div style=”font-size:12px; color:var(--muted); margin-top:8px; line-height:1.5;”>{{ vitrineFmtHint }}</div>
+            <sc-if value=”{{ hasVitrineVideo }}” hint-placeholder-val=”{{ false }}”>
+              <div style=”margin-top:18px; border-radius:14px; overflow:hidden; background:#f0e7d4; position:relative;” style=”aspect-ratio:var(--vitrine-ar,4/3); max-height:260px;”>
+                <sc-if value=”{{ vitrineVideoIsVideo }}” hint-placeholder-val=”{{ false }}”><video src=”{{ vitrineVideoUrl }}” controls style=”width:100%; display:block; max-height:260px; object-fit:cover;”></video></sc-if>
+                <sc-if value=”{{ vitrineVideoIsImage }}” hint-placeholder-val=”{{ true }}”><img src=”{{ vitrineVideoUrl }}” alt=”” style=”width:100%; display:block; max-height:260px; object-fit:cover;”></sc-if>
+              </div>
+            </sc-if>
+            <label style=”display:flex; align-items:center; gap:10px; margin-top:16px; background:var(--jungle); color:#fff; font-family:var(--sans); font-weight:800; font-size:14px; padding:12px 20px; border-radius:100px; cursor:pointer; width:fit-content; opacity:{{ uploadVitrineBusy ? '.6' : '1' }};”>{{ uploadVitrineLabel }}<input type=”file” accept=”video/*,image/*” onChange=”{{ onVitrineVideoFile }}” style=”display:none;”></label>
+            <sc-if value=”{{ hasVitrineVideo }}” hint-placeholder-val=”{{ false }}”>
+              <button onClick=”{{ removeVitrineVideo }}” style=”display:block; margin-top:10px; border:none; background:none; cursor:pointer; color:var(--coral); font-family:var(--body); font-size:13px; font-weight:600; padding:0;”>Retirer la vidéo</button>
+            </sc-if>
+          </div>
+        </div>
+      </sc-if>
     </div>
   </sc-if>
 
@@ -398,6 +454,9 @@ class Component extends DCLogic {
     confirmData: null,
     adminLogin: false, adminIn: false, adminBusy: false, adminErr: '',
     adminEmail: '', orders: [], soundOn: true,
+    adminTab: 'orders',
+    vitrineVideo: { url: null, mediaType: null, format: '4-3' },
+    uploadVitrineBusy: false,
   };
   form = { name: '', phone: '', address: '', notes: '', admEmail: '', admPass: '' };
   OCCASIONS = [
@@ -476,6 +535,8 @@ class Component extends DCLogic {
     if (!this.ensureFb()) {
       if (tries < 80) setTimeout(() => this.initFirebase(tries + 1), 150);
       else console.warn('Firebase SDK failed to load');
+    } else {
+      this.subscribeSettings();
     }
   }
 
@@ -592,6 +653,65 @@ class Component extends DCLogic {
     const { id, status } = e.currentTarget.dataset;
     if (this.db) this.db.collection('orders').doc(id).update({ status });
   };
+
+  subscribeSettings() {
+    if (!this.db || this._subSettings) return;
+    this._subSettings = this.db.collection('settings').doc('home').onSnapshot((snap) => {
+      if (snap.exists) {
+        const d = snap.data();
+        if (d && d.homeVideo) this.setState({ vitrineVideo: d.homeVideo });
+      }
+    }, (e) => console.error('settings listen', e));
+  }
+
+  setAdminTab = (e) => { this.setState({ adminTab: e.currentTarget.dataset.tab }); };
+
+  setVitrineFormat = (e) => {
+    const fmt = e.currentTarget.dataset.fmt;
+    this.setState(s => {
+      const vv = { ...(s.vitrineVideo || {}), format: fmt };
+      this._saveVitrineVideo(vv);
+      return { vitrineVideo: vv };
+    });
+  };
+
+  onVitrineVideoFile = async (e) => {
+    const file = e.target && e.target.files && e.target.files[0];
+    if (!file || !this.ensureFb()) return;
+    const fb = window.firebase;
+    if (!fb || !fb.storage) { console.warn('Storage not available'); return; }
+    this.setState({ uploadVitrineBusy: true });
+    try {
+      const storage = fb.storage();
+      const ext = file.name.split('.').pop();
+      const ref = storage.ref('home/vitrine_' + Date.now() + '.' + ext);
+      await ref.put(file);
+      const url = await ref.getDownloadURL();
+      const mediaType = file.type.startsWith('video') ? 'video' : 'image';
+      this.setState(s => {
+        const vv = { ...(s.vitrineVideo || {}), url, mediaType };
+        this._saveVitrineVideo(vv);
+        return { vitrineVideo: vv, uploadVitrineBusy: false };
+      });
+    } catch (err) {
+      console.error('vitrine upload', err);
+      this.setState({ uploadVitrineBusy: false });
+    }
+  };
+
+  removeVitrineVideo = () => {
+    this.setState(s => {
+      const vv = { ...(s.vitrineVideo || {}), url: null, mediaType: null };
+      this._saveVitrineVideo(vv);
+      return { vitrineVideo: vv };
+    });
+  };
+
+  _saveVitrineVideo(vv) {
+    if (!this.db) return;
+    this.db.collection('settings').doc('home').set({ homeVideo: vv }, { merge: true })
+      .catch(e => console.error('save vitrine video', e));
+  }
 
   pad(n) { return String(n).padStart(2, '0'); }
   frDate(iso) { const p = iso.split('-').map(Number); return new Date(p[0], p[1] - 1, p[2]).toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long' }); }
@@ -797,6 +917,49 @@ class Component extends DCLogic {
       statToday: String(todayCount), statRevenue: this.fmt(todayRev),
       statPending: String(pending), statTotal: String(orders.length),
       toggleSound: this.toggleSound, soundIcon: S.soundOn ? '🔔' : '🔕',
+
+      // admin tabs
+      setAdminTab: this.setAdminTab,
+      tabIsOrders: S.adminTab !== 'vitrine',
+      tabIsVitrine: S.adminTab === 'vitrine',
+      tabStyleOrders: 'border:none; cursor:pointer; font-family:var(--sans); font-weight:700; font-size:14px; padding:12px 20px; border-bottom:3px solid ' + (S.adminTab !== 'vitrine' ? 'var(--jungle); color:var(--jungle);' : 'transparent; color:var(--muted); background:none;'),
+      tabStyleVitrine: 'border:none; cursor:pointer; font-family:var(--sans); font-weight:700; font-size:14px; padding:12px 20px; border-bottom:3px solid ' + (S.adminTab === 'vitrine' ? 'var(--jungle); color:var(--jungle);' : 'transparent; color:var(--muted); background:none;'),
+
+      // vitrine video
+      ...(() => {
+        const RATIO_CSS = { 'reel': '9/16', '1-1': '1/1', '3-4': '3/4', '4-3': '4/3', '16-9': '16/9' };
+        const RATIO_HINTS = {
+          'reel': 'Reel 9:16 — vidéo portrait (Instagram/TikTok). Les cartes produits récupèrent la place libérée.',
+          '1-1': 'Carré 1:1 — équilibre visuel, idéal pour les photos produits.',
+          '3-4': 'Portrait 3:4 — format photo légèrement vertical.',
+          '4-3': 'Paysage 4:3 — format standard, bon équilibre texte/vidéo.',
+          '16-9': 'Large 16:9 — vidéo cinématique. Les cartes produits se réduisent.',
+        };
+        const vv = S.vitrineVideo || {};
+        const vitrineFmt = vv.format || '4-3';
+        const vitrineAr = RATIO_CSS[vitrineFmt] || '4/3';
+        const vitrineVideoUrl = vv.url || null;
+        const vitrineVideoIsVideo = vv.mediaType === 'video';
+        const hasVitrineVideo = !!vitrineVideoUrl;
+        const vitrineFmtBtns = [
+          { key: 'reel', label: 'Reel  9:16' }, { key: '1-1', label: 'Carré  1:1' },
+          { key: '3-4', label: 'Portrait  3:4' }, { key: '4-3', label: 'Paysage  4:3' },
+          { key: '16-9', label: 'Large  16:9' },
+        ].map(f => ({
+          key: f.key, label: f.label,
+          style: 'border:none; cursor:pointer; font-family:var(--sans); font-weight:700; font-size:13px; padding:9px 16px; border-radius:100px; ' + (vitrineFmt === f.key ? 'background:var(--jungle); color:#fff;' : 'background:#f0e7d4; color:var(--jungle);'),
+        }));
+        return {
+          vitrineAr, vitrineVideoUrl, hasVitrineVideo, noVitrineVideo: !hasVitrineVideo,
+          vitrineVideoIsVideo, vitrineVideoIsImage: hasVitrineVideo && !vitrineVideoIsVideo,
+          vitrineFmtBtns, vitrineFmtHint: RATIO_HINTS[vitrineFmt] || '',
+          setVitrineFormat: this.setVitrineFormat,
+          onVitrineVideoFile: this.onVitrineVideoFile,
+          removeVitrineVideo: this.removeVitrineVideo,
+          uploadVitrineBusy: S.uploadVitrineBusy,
+          uploadVitrineLabel: S.uploadVitrineBusy ? 'Envoi en cours…' : (hasVitrineVideo ? 'Remplacer la vidéo' : '+ Ajouter une vidéo / photo'),
+        };
+      })(),
     };
   }
 }
